@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+body {
+  background-color: black;
+}
+
+@theme {
+  --breakpoint-xs: 950px;
+}
+
+@theme {
+    --animate-motion-top-bottom: motion-top-bottom 10s ease-in-out infinite;
+
+  @keyframes motion-top-bottom {
+    0%,
+    100% {
+      transform: translateY(0) skew(-5deg, -5deg);
+    }
+    50% {
+      transform: translateY(10px) skew(-2deg, -5deg);
+    }
+  }
+}
