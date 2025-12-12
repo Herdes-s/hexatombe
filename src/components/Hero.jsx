@@ -1,7 +1,7 @@
 import sacrificio from "../assets/outros/sacrificio.png";
 import sangue from "../assets/outros/sangue.png";
-import fundoSection from "../assets/logos/fundo-section-1.png";
-import ilustracaoCultista from "../assets/logos/cultista.jpg";
+import fundoSection from "../assets/logos/fundo-section-2.png";
+import ilustracaoCultista from "../assets/logos/cultista.png";
 import logoHexaBlack from "../assets/logos/logo-hexa-black.png";
 
 function Hero() {
@@ -11,25 +11,11 @@ function Hero() {
       className="w-full bg-no-repeat bg-center bg-cover pb-8 rounded-b-[50px] relative overflow-hidden"
     >
       <div className="w-[80%] mx-auto relative z-10">
-        {/* ELEMENTOS DE FUNDO (SANGUE + SACRIFÍCIO) */}
-        <div className="elements pointer-events-none">
-          <img
-            className="absolute top-[27%] right-[11%] origin-[150px_center] w-[100px] opacity-60 animate-pulse"
-            src={sacrificio}
-            alt="Símbolo de sacrifício"
-          />
-          <img
-            className="absolute top-[47%] right-[32%] origin-[150px_center] w-[100px] opacity-60 animate-pulse delay-200"
-            src={sangue}
-            alt="Ritual de sangue"
-          />
-        </div>
-
         {/* LOGO */}
         <div className="w-full flex items-center justify-center relative py-6">
           <h1 className="drop-shadow-[0_0_15px_#ff0000] w-[40%] flex justify-center">
             <img
-              className="w-[90%]"
+              className="w-[90%] "
               src={logoHexaBlack}
               alt="Logo Hexatombe — preto"
             />
@@ -38,7 +24,7 @@ function Hero() {
 
         {/* TEXTO + IMAGEM */}
         <div className="flex w-full justify-center items-center gap-8">
-          <div className="w-[60%] text-justify text-[clamp(10px,2vw,20px)] drop-shadow-[0_0_15px_#ff0000] flex flex-col gap-4 text-white">
+          <div className="w-[60%] text-justify text-[clamp(10px,2vw,20px)] drop-shadow-[0_0_10px_#000000] flex flex-col gap-4 text-white">
             <p>
               Ninguém sabe ao certo quando começou, mas todos sabem que o
               Hexatombe está cada dia mais perto. Os sinais já são vistos por
@@ -58,10 +44,23 @@ function Hero() {
 
           <div className="w-[40%] flex justify-center relative">
             <img
-              className="w-[80%] rounded-xl shadow-[0_0_20px_#400000]"
+              className="w-[80%] rounded-xl drop-shadow-[0_0_10px_#400000] border-b-[5px] border-zinc-800"
               src={ilustracaoCultista}
               alt="Ilustração: cultista"
             />
+            {/* ELEMENTOS DE FUNDO (SANGUE + SACRIFÍCIO) */}
+            <div>
+              <img
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100px] animate-[orbitar_15s_linear_infinite] drop-shadow-[0_0_5px_#000000]"
+                src={sacrificio}
+                alt="Símbolo de sacrifício"
+              />
+              <img
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100px] animate-[orbitar_15s_linear_-7.5s_infinite] drop-shadow-[0_0_5px_#000000]"
+                src={sangue}
+                alt="Ritual de sangue"
+              />
+            </div>
           </div>
         </div>
 

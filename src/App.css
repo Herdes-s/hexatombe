@@ -9,12 +9,24 @@ body {
   background-color: black;
 }
 
+h2,
+h3 {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-family: "Alegreya", serif;
+  font-style: normal;
+}
+
 @theme {
   --breakpoint-xs: 950px;
 }
 
 @theme {
-    --animate-motion-top-bottom: motion-top-bottom 10s ease-in-out infinite;
+  --animate-motion-top-bottom: motion-top-bottom 10s ease-in-out infinite;
 
   @keyframes motion-top-bottom {
     0%,
@@ -23,6 +35,15 @@ body {
     }
     50% {
       transform: translateY(10px) skew(-2deg, -5deg);
+    }
+  }
+
+  @keyframes orbitar {
+    from {
+      transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(150px) rotate(-360deg);
     }
   }
 }

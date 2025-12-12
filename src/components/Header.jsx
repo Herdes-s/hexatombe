@@ -1,11 +1,9 @@
-import fundoSection from "../assets/logos/fundo-section-1.png";
 import logoHexa from "../assets/logos/logo-hexa-white.png";
 
 function Header() {
   return (
     <header
-      style={{ backgroundImage: `url(${fundoSection})` }}
-      className="bg-cover bg-center bg-no-repeat relative z-10"
+      className="bg-[#252b24] relative z-10"
     >
       <div className="flex items-center justify-between px-[10%] ">
         <div className="w-[15%] h-auto text-center">
@@ -28,7 +26,7 @@ function Header() {
             </li>
             <li>
               <a
-                href="#"
+                href="#personagem"
                 className=" no-underline text-white font-bold hover:text-red-500 hover:drop-shadow-[0_0_10px] drop-shadow-red-600"
               >
                 Persona
@@ -36,7 +34,7 @@ function Header() {
             </li>
             <li>
               <a
-                href="#"
+                href="#elenco"
                 className=" no-underline text-white font-bold hover:text-red-500 hover:drop-shadow-[0_0_10px] drop-shadow-red-600"
               >
                 Elenco

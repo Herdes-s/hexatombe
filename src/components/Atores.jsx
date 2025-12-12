@@ -20,15 +20,48 @@ import Actor from "./PersonagemCard/Actor";
 
 function Atores() {
   return (
-    <section className="w-full">
+    <section className="w-full" id="elenco">
       <div className="w-[80%] my-10 mx-auto">
-        <div className="grid grid-cols-2 justify-items-center items-center justify-center gap-y-12 drop-shadow-[0_0_20px_#300000]">
-          <Actor imgActor={bagi} actor="Bagi" imgPersona={jae} persona="Jae-yoon" />
-          <Actor imgActor={abelha} actor="Abelha" imgPersona={dalmo} persona="Dalmo" />
-          <Actor imgActor={cereaww} actor="Cereaww" imgPersona={aguiar} persona="Aguiar" />
-          <Actor imgActor={beamom} actor="Beamom" imgPersona={kemi} persona="Kemi" />
-          <Actor imgActor={caligrafo} actor="Caligrafo" imgPersona={labirinto} persona="Labirinto" />
-          <Actor imgActor={bastet} actor="Bastet" imgPersona={henri} persona="Henri" />
+        <h2 className=" text-center drop-shadow-[0_0_10px_red] text-black text-[clamp(20px,6vw,80px)] ">
+          Atores
+        </h2>
+        <div className="grid xs:grid-cols-2 grid-col-1 justify-items-center items-center justify-center gap-y-12 drop-shadow-[0_0_20px_#300000] text-white">
+          <Actor
+            imgActor={bagi}
+            actor="Bagi"
+            imgPersona={jae}
+            persona="Jae-yoon"
+          />
+          <Actor
+            imgActor={abelha}
+            actor="Abelha"
+            imgPersona={dalmo}
+            persona="Dalmo"
+          />
+          <Actor
+            imgActor={cereaww}
+            actor="Cereaww"
+            imgPersona={aguiar}
+            persona="Aguiar"
+          />
+          <Actor
+            imgActor={beamom}
+            actor="Beamom"
+            imgPersona={kemi}
+            persona="Kemi"
+          />
+          <Actor
+            imgActor={caligrafo}
+            actor="Caligrafo"
+            imgPersona={labirinto}
+            persona="Labirinto"
+          />
+          <Actor
+            imgActor={bastet}
+            actor="Bastet"
+            imgPersona={henri}
+            persona="Henri"
+          />
         </div>
       </div>
     </section>
