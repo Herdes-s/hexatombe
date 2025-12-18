@@ -1,10 +1,10 @@
-import Atores from "../components/Atores";
-import Carrossel from "../components/Carrossel";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import PersonagemCard from "../components/PersonagemCard";
-import Sobre from "../components/Sobre";
+import Atores from "../components/FilesHome/Atores";
+import Carrossel from "../components/FilesHome/Carrossel";
+import Footer from "../components/FilesHome/Footer";
+import Header from "../components/FilesHome/Header";
+import Hero from "../components/FilesHome/Hero";
+import PersonagemCard from "../components/FilesHome/PersonagemCard";
+import Sobre from "../components/FilesHome/Sobre";
 
 function Home() {
   return (

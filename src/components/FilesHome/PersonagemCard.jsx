@@ -1,4 +1,4 @@
-import todosJuntos from "../assets/persona/aleatorias/todos-juntos.jpg";
+import todosJuntos from "../../assets/persona/aleatorias/todos-juntos.jpg";
 
 import CardPersonagem from "./PersonagemCard/CardPersonagem";
 

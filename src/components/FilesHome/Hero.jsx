@@ -1,8 +1,8 @@
-import sacrificio from "../assets/outros/sacrificio.png";
-import sangue from "../assets/outros/sangue.png";
-import fundoSection from "../assets/logos/fundo-section-2.png";
-import ilustracaoCultista from "../assets/logos/cultista.png";
-import logoHexaBlack from "../assets/logos/logo-hexa-black.png";
+import sacrificio from "../../assets/outros/sacrificio.png";
+import sangue from "../../assets/outros/sangue.png";
+import fundoSection from "../../assets/logos/fundo-section-2.png";
+import ilustracaoCultista from "../../assets/logos/cultista.png";
+import logoHexaBlack from "../../assets/logos/logo-hexa-black.png";
 
 function Hero() {
   return (

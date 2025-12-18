@@ -1,4 +1,4 @@
-import logoHexa from "../assets/logos/logo-hexa-white.png";
+import logoHexa from "../../assets/logos/logo-hexa-white.png";
 
 function Header() {
   return (
