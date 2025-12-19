@@ -1,5 +1,5 @@
 import { useState } from "react";
-import personages from "../../../data/personages";
+import personages from "../../../data/Protagonists";
 
 function CardPersonagem() {
   const [index, setIndex] = useState(0);

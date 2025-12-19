@@ -1,19 +1,19 @@
 // Com mascara
-import dalmo from "../assets/images/personas/dalmo.webp";
-import jae from "../assets/images/personas/jae.webp";
-import aguiar from "../assets/images/personas/aguiar.webp";
-import labirinto from "../assets/images/personas/labirinto.webp";
-import kemi from "../assets/images/personas/kemi.webp";
-import henri from "../assets/images/personas/henri.webp";
+import dalmo from "../assets/images/CardsGlobal/dalmo.webp";
+import jae from "../assets/images/CardsGlobal/jae.webp";
+import aguiar from "../assets/images/CardsGlobal/aguiar.webp";
+import labirinto from "../assets/images/CardsGlobal/labirinto.webp";
+import kemi from "../assets/images/CardsGlobal/kemi.webp";
+import henri from "../assets/images/CardsGlobal/henri.webp";
 
 // Sem Mascara
 
-import colosso from "../assets/images/personas/colosso.webp";
-import x from "../assets/images/personas/x.webp";
-import mutilador from "../assets/images/personas/mutilador.webp";
-import lab from "../assets/images/personas/lab.webp";
-import fantasma from "../assets/images/personas/fantasma.webp";
-import henriCap from "../assets/images/personas/henri-capus.webp";
+import colosso from "../assets/images/CardsGlobal/colosso.webp";
+import x from "../assets/images/CardsGlobal/x.webp";
+import mutilador from "../assets/images/CardsGlobal/mutilador.webp";
+import lab from "../assets/images/CardsGlobal/lab.webp";
+import fantasma from "../assets/images/CardsGlobal/fantasma.webp";
+import henriCap from "../assets/images/CardsGlobal/henri-capus.webp";
 
 const AllPersonas = [
   {

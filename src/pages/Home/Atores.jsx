@@ -1,22 +1,22 @@
-import bagi from "../../assets/persona/outros-persona/bagi.jpg";
-import jae from "../../assets/persona/outros-persona/jae-persona.jpg";
+import bagi from "../../assets/images/persona/outros-persona/bagi.jpg";
+import jae from "../../assets/images/persona/outros-persona/jae-persona.jpg";
 
-import abelha from "../../assets/persona/outros-persona/Abelha.jpg";
-import dalmo from "../../assets/persona/outros-persona/dalmo-persona.jpg";
+import abelha from "../../assets/images/persona/outros-persona/Abelha.jpg";
+import dalmo from "../../assets/images/persona/outros-persona/dalmo-persona.jpg";
 
-import cereaww from "../../assets/persona/outros-persona/cereaww.jpg";
-import aguiar from "../../assets/persona/outros-persona/aguiar-persona.jpg";
+import cereaww from "../../assets/images/persona/outros-persona/cereaww.jpg";
+import aguiar from "../../assets/images/persona/outros-persona/aguiar-persona.jpg";
 
-import beamom from "../../assets/persona/outros-persona/beamom.jpg";
-import kemi from "../../assets/persona/outros-persona/kemi-persona.jpg";
+import beamom from "../../assets/images/persona/outros-persona/beamom.jpg";
+import kemi from "../../assets/images/persona/outros-persona/kemi-persona.jpg";
 
-import caligrafo from "../../assets/persona/outros-persona/caligrafo.jpg";
-import labirinto from "../../assets/persona/outros-persona/labirinto-persona.jpg";
+import caligrafo from "../../assets/images/persona/outros-persona/caligrafo.jpg";
+import labirinto from "../../assets/images/persona/outros-persona/labirinto-persona.jpg";
 
-import bastet from "../../assets/persona/outros-persona/Bastet.jpg";
-import henri from "../../assets/persona/outros-persona/henri.jpg";
+import bastet from "../../assets/images/persona/outros-persona/Bastet.jpg";
+import henri from "../../assets/images/persona/outros-persona/henri.jpg";
 
-import Actor from "./PersonagemCard/Actor";
+import Actor from "./components/Actor";
 
 function Atores() {
   return (

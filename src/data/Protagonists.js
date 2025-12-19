@@ -1,33 +1,33 @@
 {
   /* Foto grande */
 }
-import dalmoIcon from "../assets/persona/aleatorias/Dalmo-icon.png";
-import jaeIcon from "../assets/persona/aleatorias/Jae-icon.png";
-import kemiIcon from "../assets/persona/aleatorias/Kemi-icon.png";
-import aguiarIcon from "../assets/persona/aleatorias/Aguiar-icon.png";
-import labirintoIcon from "../assets/persona/aleatorias/labirinto-icon.png";
-import henriIcon from "../assets/persona/aleatorias/henri-icon.png";
+import dalmoIcon from "../assets/images/persona/aleatorias/Dalmo-icon.png";
+import jaeIcon from "../assets/images/persona/aleatorias/Jae-icon.png";
+import kemiIcon from "../assets/images/persona/aleatorias/Kemi-icon.png";
+import aguiarIcon from "../assets/images/persona/aleatorias/Aguiar-icon.png";
+import labirintoIcon from "../assets/images/persona/aleatorias/labirinto-icon.png";
+import henriIcon from "../assets/images/persona/aleatorias/henri-icon.png";
 
 {
   /* Foto grande com mascaras */
 }
-import dalmoMascIcon from "../assets/persona/aleatorias/Colosso-icon.png";
-import jaeMascIcon from "../assets/persona/aleatorias/X-icon.jpg";
-import kemiMascIcon from "../assets/persona/aleatorias/-icon.png";
-import aguiarMascIcon from "../assets/persona/aleatorias/mutilador-icon.png";
-import labirintoMascIcon from "../assets/persona/aleatorias/lab-icon.png";
+import dalmoMascIcon from "../assets/images/persona/aleatorias/Colosso-icon.png";
+import jaeMascIcon from "../assets/images/persona/aleatorias/X-icon.jpg";
+import kemiMascIcon from "../assets/images/persona/aleatorias/-icon.png";
+import aguiarMascIcon from "../assets/images/persona/aleatorias/mutilador-icon.png";
+import labirintoMascIcon from "../assets/images/persona/aleatorias/lab-icon.png";
 
 {
   /* Miniaturas */
 }
-import jae from "../assets/persona/outros-persona/jae-persona.jpg";
-import dalmo from "../assets/persona/outros-persona/dalmo-persona.jpg";
-import aguiar from "../assets/persona/outros-persona/aguiar-persona.jpg";
-import kemi from "../assets/persona/outros-persona/kemi-persona.jpg";
-import labirinto from "../assets/persona/outros-persona/labirinto-persona.jpg";
-import henri from "../assets/persona/outros-persona/henri.jpg";
+import jae from "../assets/images/persona/outros-persona/jae-persona.jpg";
+import dalmo from "../assets/images/persona/outros-persona/dalmo-persona.jpg";
+import aguiar from "../assets/images/persona/outros-persona/aguiar-persona.jpg";
+import kemi from "../assets/images/persona/outros-persona/kemi-persona.jpg";
+import labirinto from "../assets/images/persona/outros-persona/labirinto-persona.jpg";
+import henri from "../assets/images/persona/outros-persona/henri.jpg";
 
-const personages = [
+const Protagonists = [
   {
     mini: dalmo,
     text: " O sangue poderia até pagar bem, mas para Dalmo, A glória era viciante.",
@@ -194,4 +194,4 @@ const personages = [
   },
 ];
 
-export default personages;
+export default Protagonists;

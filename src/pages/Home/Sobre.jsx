@@ -1,8 +1,8 @@
-import dalmoColosso from "../../assets/persona/background/dalmo-colosso.png";
-import jonasAguiar from "../../assets/persona/background/jonas-aguiar-noturno.png";
-import kemi from "../../assets/persona/background/kemi.png";
-import jaeYoon from "../../assets/persona/background/jae.png";
-import labirinto from "../../assets/persona/background/labirinto.png";
+import dalmoColosso from "../../assets/images/persona/background/dalmo-colosso.png";
+import jonasAguiar from "../../assets/images/persona/background/jonas-aguiar-noturno.png";
+import kemi from "../../assets/images/persona/background/kemi.png";
+import jaeYoon from "../../assets/images/persona/background/jae.png";
+import labirinto from "../../assets/images/persona/background/labirinto.png";
 import { useEffect, useState } from "react";
 
 function Sobre() {

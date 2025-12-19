@@ -1,14 +1,14 @@
-import hexa01 from "../../assets/persona/carrosel/hexa-1.jpg";
-import hexa02 from "../../assets/persona/carrosel/hexa-2.jpg";
-import hexa03 from "../../assets/persona/carrosel/hexa-3.jpg";
-import hexa04 from "../../assets/persona/carrosel/hexa-4.jpg";
-import hexa05 from "../../assets/persona/carrosel/hexa-5.jpg";
-import hexa06 from "../../assets/persona/carrosel/hexa-6.jpg";
-import hexa07 from "../../assets/persona/carrosel/hexa-7.jpg";
-import hexa08 from "../../assets/persona/carrosel/hexa-8.jpg";
-import hexa09 from "../../assets/persona/carrosel/hexa-9.jpg";
-import hexa10 from "../../assets/persona/carrosel/hexa-10.jpg";
-import hexa11 from "../../assets/persona/carrosel/hexa-11.jpg";
+import hexa01 from "../../assets/images/persona/carrosel/hexa-1.jpg";
+import hexa02 from "../../assets/images/persona/carrosel/hexa-2.jpg";
+import hexa03 from "../../assets/images/persona/carrosel/hexa-3.jpg";
+import hexa04 from "../../assets/images/persona/carrosel/hexa-4.jpg";
+import hexa05 from "../../assets/images/persona/carrosel/hexa-5.jpg";
+import hexa06 from "../../assets/images/persona/carrosel/hexa-6.jpg";
+import hexa07 from "../../assets/images/persona/carrosel/hexa-7.jpg";
+import hexa08 from "../../assets/images/persona/carrosel/hexa-8.jpg";
+import hexa09 from "../../assets/images/persona/carrosel/hexa-9.jpg";
+import hexa10 from "../../assets/images/persona/carrosel/hexa-10.jpg";
+import hexa11 from "../../assets/images/persona/carrosel/hexa-11.jpg";
 import { useEffect, useState } from "react";
 
 function Carrossel() {

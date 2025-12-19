@@ -1,6 +1,6 @@
-import todosJuntos from "../../assets/persona/aleatorias/todos-juntos.jpg";
+import todosJuntos from "../../assets/images/persona/aleatorias/todos-juntos.jpg";
 
-import CardPersonagem from "./PersonagemCard/CardPersonagem";
+import Cards from "./Components/Cards";
 
 function PersonagemCard() {
   return (
@@ -17,7 +17,7 @@ function PersonagemCard() {
           />
         </div>
         <div>
-          <CardPersonagem />
+          <Cards />
         </div>
       </div>
     </section>

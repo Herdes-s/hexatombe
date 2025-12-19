@@ -1,5 +1,5 @@
-import sacrificio from "../../assets/outros/sacrificio.png";
-import sangue from "../../assets/outros/sangue.png";
+import sacrificio from "../../assets/images/Simbulos/sacrificio.png";
+import sangue from "../../assets/images/Simbulos/sangue.png";
 import fundoSection from "../../assets/logos/fundo-section-2.png";
 import ilustracaoCultista from "../../assets/logos/cultista.png";
 import logoHexaBlack from "../../assets/logos/logo-hexa-black.png";
