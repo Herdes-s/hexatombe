@@ -10,6 +10,7 @@ import hexa09 from "../../assets/images/persona/carrosel/hexa-9.jpg";
 import hexa10 from "../../assets/images/persona/carrosel/hexa-10.jpg";
 import hexa11 from "../../assets/images/persona/carrosel/hexa-11.jpg";
 import { useEffect, useState } from "react";
+import FadeIn from "../../hooks/FadeIn";
 
 function Carrossel() {
   const [index, setIndex] = useState(0);
@@ -38,11 +39,13 @@ function Carrossel() {
     <section className="w-full h-[500px] bg-linear-to-b from-[#000000] via-[#300000] to-[#000000] relative">
       <div className="max-w-[80%] h-full mx-auto relative">
         <div className="flex items-center justify-center gap-10 absolute inset-0">
-          <img
-            className="m-auto max-w-full max-h-[380px]  drop-shadow-[0_0_20px_#300000] rounded-2xl "
-            src={carrossel[index]}
-            alt="hexa-cenas"
-          />
+          <FadeIn>
+            <img
+              className="m-auto max-w-full max-h-[380px]  drop-shadow-[0_0_20px_#300000] rounded-2xl "
+              src={carrossel[index]}
+              alt="hexa-cenas"
+            />
+          </FadeIn>
         </div>
       </div>
     </section>

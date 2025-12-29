@@ -5,6 +5,13 @@ import aguiar from "../assets/images/CardsGlobal/aguiar.webp";
 import labirinto from "../assets/images/CardsGlobal/labirinto.webp";
 import kemi from "../assets/images/CardsGlobal/kemi.webp";
 import henri from "../assets/images/CardsGlobal/henri.webp";
+// Psikolera
+import ale from "../assets/images/CardsGlobal/ale.webp"
+import caioTeles from "../assets/images/CardsGlobal/caioTeles.webp"
+import cindyLopes from "../assets/images/CardsGlobal/cindyLopes.webp"
+import eloy from "../assets/images/CardsGlobal/eloy.webp"
+import franco from "../assets/images/CardsGlobal/franco.webp"
+import caitoRocha from "../assets/images/CardsGlobal/caito.webp"
 
 // Sem Mascara
 
@@ -14,9 +21,19 @@ import mutilador from "../assets/images/CardsGlobal/mutilador.webp";
 import lab from "../assets/images/CardsGlobal/lab.webp";
 import fantasma from "../assets/images/CardsGlobal/fantasma.webp";
 import henriCap from "../assets/images/CardsGlobal/henri-capus.webp";
+// Psikolera
+import aleMasc from "../assets/images/CardsGlobal/aleMasc.webp"
+import caioTelesMasc from "../assets/images/CardsGlobal/caioTelesMasc.webp"
+import cindyLopesMasc from "../assets/images/CardsGlobal/cindyLopesMasc.webp"
+import eloyMasc from "../assets/images/CardsGlobal/eloyMasc.webp"
+import francoMasc from "../assets/images/CardsGlobal/francoMasc.webp"
+import caitoRochaMasc from "../assets/images/CardsGlobal/caitoMasc.webp"
+
 
 const AllPersonas = [
+  // Macarados
   {
+    id: 101,
     info: "Para o agente da Ordem com quem esse assassino trocou de corpo, veja Tuco Belez.",
     sitacao:
       "O sangue podia até pagar bem, mas para Dalmo... a glória era viciante.",
@@ -51,6 +68,7 @@ const AllPersonas = [
     ],
   },
   {
+    id: 102,
     sitacao:
       "Ao encontrar no Sangue a liberdade da rebeldia... Jae matava porque podia.",
     interprete:
@@ -84,6 +102,7 @@ const AllPersonas = [
     ],
   },
   {
+    id: 103,
     sitacao:
       "Ao encontrar no Sangue a liberdade da rebeldia... Jae matava porque podia.",
     interprete:
@@ -117,6 +136,7 @@ const AllPersonas = [
     ],
   },
   {
+    id: 104,
     sitacao:
       "Kemi não se importava com um ideal moral... ela só matava para vencer.",
     interprete: "Beatriz Beamom Pozzebon",
@@ -149,6 +169,7 @@ const AllPersonas = [
     ],
   },
   {
+    id: 105,
     sitacao:
       "A resposta nunca esperou no final do labirinto, o que espera no final do labirinto é algo muito pior, muito mais terrível; o que espera no final do labirinto... é você.",
     interprete: "Franco Calígrafo Madeira",
@@ -181,6 +202,7 @@ const AllPersonas = [
     ],
   },
   {
+    id: 106,
     sitacao:
       "Muito emocionante... mas eu avisei vocês, que vocês não iam querer me ver sangrar.",
     classe: "Ocultista",
@@ -209,6 +231,193 @@ const AllPersonas = [
       {
         name: "Henri",
         img: henriCap,
+      },
+    ],
+  },
+  // Psikolera
+  {
+    id: 107,
+    sitacao:
+      "Mercenária... ambição... solitária... vingança... ganância... dinheiro... trauma.",
+    classe: "Ocultista",
+    equipe: "Psikolera",
+    status: "Morto",
+    sobre: [
+      {
+        sobre01:
+          "Alê foi o tecladista dos PSIKOLERA, uma banda ocultista participante do Hexatombe.",
+      },
+      {
+        sobre02:
+          "Elu aparece pela primeira vez durante o 2º episódio de Hexatombe, fazendo o show com a banda. Depois, aparece sem sua máscara pela primeira vez no 4º episódio, quando Kemi e Dalmo visitam sua base no Circo. Alê foi devorado e morto por Zéfero, enquanto tentava proteger Caíto, seu sacríficio.",
+      },
+      {
+        sobre03: "",
+      },
+    ],
+    formas: [
+      {
+        name: "Ale",
+        img: ale,
+      },
+      {
+        name: "Ale",
+        img: aleMasc,
+      },
+    ],
+  },
+  {
+    id: 108,
+    sitacao:
+      "Prontos pro Show final das Pegadas de Sangue?? Tá chegando!! The Monica Club, P#RRA!!!!!",
+    classe: "Ocultista",
+    equipe: "Psikolera",
+    status: "Morto",
+    sobre: [
+      {
+        sobre01:
+          "Caio Teles foi o vocalista dos PSIKOLERA, uma banda ocultista participante do Hexatombe.",
+      },
+      {
+        sobre02:
+          "Ele aparece pela primeira vez durante o 2º episódio de Hexatombe, fazendo o show com a banda. Depois, aparece sem sua máscara pela primeira vez no 6° episódio, quando Aguiar, Jae e Labirinto vão até a Budega em busca de alimentos. Caio teve o seu fim na igreja, quando Mutilador Noturno decapitou-o enquanto estava caído no chão.",
+      },
+      {
+        sobre03: "",
+      },
+    ],
+    formas: [
+      {
+        name: "Caio Teles",
+        img: caioTeles,
+      },
+      {
+        name: "Caio Teles",
+        img: caioTelesMasc,
+      },
+    ],
+  },
+  {
+    id: 109,
+    sitacao: "Para, Caio! Eu sou baixinha!",
+    classe: "Ocultista",
+    equipe: "Psikolera",
+    status: "Morto",
+    sobre: [
+      {
+        sobre01:
+          "Cindy Lopes foi a líder e baixista dos PSIKOLERA, uma banda ocultista participante do Hexatombe.",
+      },
+      {
+        sobre02:
+          "Ela aparece pela primeira vez durante o 2º episódio de Hexatombe, fazendo o show com a banda. Depois, aparece sem sua máscara pela primeira vez no 6º episódio, quando Aguiar, Jae e Labirinto vão até a Budega em busca de alimentos. Cindy é morta ao ter a sua cara devorada por Raziel na batalha contra os vampiros.",
+      },
+      {
+        sobre03: "",
+      },
+    ],
+    formas: [
+      {
+        name: "Cindy Lopes",
+        img: cindyLopes,
+      },
+      {
+        name: "Cindy Lopes",
+        img: cindyLopesMasc,
+      },
+    ],
+  },
+  {
+    id: 110,
+    sitacao: "O SHOW TÁ CHEGANDO É MELHOR SE PREPARAREM SEUS MERDAS",
+    classe: "Ocultista",
+    equipe: "Psikolera",
+    status: "Vivo",
+    sobre: [
+      {
+        sobre01:
+          "Eloy, cujo nome original é Glauber, é o baterista e cofundador dos PSIKOLERA, uma banda ocultista participante do Hexatombe.",
+      },
+      {
+        sobre02:
+          "Ele aparece pela primeira vez durante o 2º episódio de Hexatombe, com a mascara em seu rosto, tocando sua bateria ao fazer o show com sua banda. Depois aparece, dessa vez sem sua máscara, pela primeira vez no 4º episódio, quando Kemi e Dalmo visitam sua base no Circo.",
+      },
+      {
+        sobre03: "",
+      },
+    ],
+    formas: [
+      {
+        name: "Eloy",
+        img: eloy,
+      },
+      {
+        name: "Eloy",
+        img: eloyMasc,
+      },
+    ],
+  },
+  {
+    id: 111,
+    sitacao: "endo bem honesto... Eu acho que só quero ver o mundo queimar.",
+    classe: "Ocultista",
+    equipe: "Psikolera",
+    status: "Morto",
+    sobre: [
+      {
+        sobre01:
+          "Franco foi o guitarrista dos PSIKOLERA, uma banda ocultista participante do Hexatombe.",
+      },
+      {
+        sobre02:
+          "Ele apareceu pela primeira vez durante o 2º episódio de Hexatombe, fazendo o show com a banda. Depois, aparece sem sua máscara pela primeira vez no 4º episódio, quando Kemi e Dalmo visitam sua base no Circo.",
+      },
+      {
+        sobre03:
+          "Franco foi brutalmente assassinado por Raziel durante a invasão dos Vampiros ao Circo na noite do terceiro dia, tendo sua cabeça arrancada com um único golpe.",
+      },
+    ],
+    formas: [
+      {
+        name: "Franco",
+        img: franco,
+      },
+      {
+        name: "Franco",
+        img: francoMasc,
+      },
+    ],
+  },
+  {
+    id: 112,
+    sitacao:
+      "A primeira coisa que vocês fazem quando o seu amigo morre é falar do Diabo? Vocês são piores do que eu imaginava.",
+    classe: "Ocultista",
+    equipe: "Psikolera",
+    status: "Morto",
+    ocupacao: "Sacrifício",
+    sobre: [
+      {
+        sobre01:
+          "Caíto Rocha foi um dos estigmados do Hexatombe, sendo o sacrifício da equipe PSIKOLERA, usando como base o Circo. Teve sua primeira aparição ainda no 2º episódio de Hexatombe com seu rosto estampado em um cartaz de desaparecido que estava pregado na parede do beco atrás de Jeremias.",
+      },
+      {
+        sobre02:
+          "Caíto aparece novamente no 4º episódio de Hexatombe dentro da tenda na base dos PSIKOLERA, estando em um tipo de trono dentro de um globo da morte modificado com espinhos e exigindo que trouxessem comida e água para ele, ameaçando se suicidar com um tiro de revólver caso não cumprissem as exigências. Caíto foi morto por Cristino no 8º episodio de Hexatombe, que o degolou, usando-o de sacrifício para uma das portas de Tenebris.",
+      },
+      {
+        sobre03:
+          "Após ser levado pelos Mascarados para o bunker onde teve sua vida trocada pela de Pomba, é morto por Cristino com seu facão que corta a garganta de Caíto e mata-o instantaneamente.",
+      },
+    ],
+    formas: [
+      {
+        name: "Caíto Rocha",
+        img: caitoRocha,
+      },
+      {
+        name: "Caíto Rocha",
+        img: caitoRochaMasc,
       },
     ],
   },

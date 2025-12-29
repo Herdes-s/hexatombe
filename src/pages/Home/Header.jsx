@@ -1,11 +1,20 @@
+import { useEffect, useState } from "react";
 import logoHexa from "../../assets/logos/logo-hexa-white.png";
 
 function Header() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setShow(true), 500);
+  }, []);
+
   return (
-    <header
-      className="bg-[#252b24] relative z-10"
-    >
-      <div className="flex items-center justify-between px-[10%] ">
+    <header className="bg-[#252b24] relative z-10">
+      <div
+        className={`flex items-center justify-between px-[10%] transition-all  duration-700 ease-in-out ${
+          show ? "translate-y-0 " : "-translate-y-10"
+        }`}
+      >
         <div className="w-[15%] h-auto text-center">
           <img
             src={logoHexa}
