@@ -12,10 +12,11 @@ import henriIcon from "../assets/images/persona/aleatorias/henri-icon.png";
   /* Foto grande com mascaras */
 }
 import dalmoMascIcon from "../assets/images/persona/aleatorias/Colosso-icon.png";
-import jaeMascIcon from "../assets/images/persona/aleatorias/X-icon.jpg";
+import jaeMascIcon from "../assets/images/persona/aleatorias/X-icon.png";
 import kemiMascIcon from "../assets/images/persona/aleatorias/-icon.png";
 import aguiarMascIcon from "../assets/images/persona/aleatorias/mutilador-icon.png";
 import labirintoMascIcon from "../assets/images/persona/aleatorias/lab-icon.png";
+import henriMascIcon from "../assets/images/persona/aleatorias/henriMasc-icon.png";
 
 {
   /* Miniaturas */
@@ -26,6 +27,9 @@ import aguiar from "../assets/images/persona/outros-persona/aguiar-persona.jpg";
 import kemi from "../assets/images/persona/outros-persona/kemi-persona.jpg";
 import labirinto from "../assets/images/persona/outros-persona/labirinto-persona.jpg";
 import henri from "../assets/images/persona/outros-persona/henri.jpg";
+
+import semMasc from "../assets/images/persona/aleatorias/semMasc.jpg";
+import comMasc from "../assets/images/persona/aleatorias/comMasc.jpg";
 
 const Protagonists = [
   {
@@ -48,10 +52,12 @@ const Protagonists = [
       {
         img: dalmoIcon,
         name: "Dalmo",
+        icon: semMasc,
       },
       {
         img: dalmoMascIcon,
         name: "COLOSSO",
+        icon: comMasc,
       },
     ],
   },
@@ -75,10 +81,12 @@ const Protagonists = [
       {
         img: jaeIcon,
         name: "JAE-YOON",
+        icon: semMasc,
       },
       {
         img: jaeMascIcon,
         name: "X",
+        icon: comMasc,
       },
     ],
   },
@@ -102,10 +110,12 @@ const Protagonists = [
       {
         img: kemiIcon,
         name: "KEMI",
+        icon: semMasc,
       },
       {
         img: kemiMascIcon,
         name: "...",
+        icon: comMasc,
       },
     ],
   },
@@ -129,10 +139,12 @@ const Protagonists = [
       {
         img: aguiarIcon,
         name: "AGUIAR",
+        icon: semMasc,
       },
       {
         img: aguiarMascIcon,
         name: "MUTILADOR NOTURNO",
+        icon: comMasc,
       },
     ],
   },
@@ -161,10 +173,12 @@ const Protagonists = [
       {
         img: labirintoIcon,
         name: "LABIRINTO",
+        icon: semMasc,
       },
       {
         img: labirintoMascIcon,
         name: "???",
+        icon: comMasc,
       },
     ],
   },
@@ -185,10 +199,12 @@ const Protagonists = [
       {
         img: henriIcon,
         name: "Henri",
+        icon: semMasc,
       },
       {
-        img: henriIcon,
+        img: henriMascIcon,
         name: "Henri",
+        icon: comMasc,
       },
     ],
   },

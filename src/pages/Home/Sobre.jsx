@@ -19,21 +19,21 @@ function Sobre() {
   }, [fotos.length]);
 
   return (
-    <section className="text-justify relative">
+    <section className="text-justify relative overflow-hidden ">
       <FadeIn>
-        <div className="w-[80%] mx-auto py-100px">
+        <div className="w-[80%] mx-auto py-[100px]">
           <div>
             <img
-              className="absolute top-[20%] right-[10%] h-[340px] drop-shadow-[0_0_15px_#300000] opacity-50"
+              className="hidden md:block absolute z-0 top-1/2 right-[5%] -translate-y-1/2 h-[340px] opacity-40 pointer-events-none"
               src={fotos[index]}
               alt="Fundo: Dalmo — Colosso"
             />
           </div>
           <div>
-            <h2 className="py-[50px] text-center drop-shadow-[0_0_15px_#ff0000] text-white text-[25px]">
+            <h2 className="py-[50px] text-center drop-shadow-[0_0_15px_#ff0000] text-[#dadada] text-[28px]">
               O que é o Hexatombe?
             </h2>
-            <p className="text-[clamp(10px,2vw,20px)] drop-shadow-[0_0_15px_#ff0000] text-white">
+            <p className="text-[clamp(10px,2vw,18px)] drop-shadow-[0_0_15px_#9f0000] text-[#b6b6b6] z-10 leading-relaxed tracking-wide">
               A Hexatombe… é difícil de explicar pra quem nunca sentiu ela de
               perto. Não é só um ritual, nem só um massacre — é uma brecha. Quando
               a Hexatombe acontece, o véu entre o nosso mundo e o Outro Lado se

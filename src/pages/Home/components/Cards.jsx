@@ -2,7 +2,7 @@ import { useState } from "react";
 import personages from "../../../data/Protagonists";
 import FadeIn from "../../../hooks/FadeIn";
 
-function CardPersonagem() {
+function Cards() {
   const [index, setIndex] = useState(0);
   const [forma, setForma] = useState(0);
 
@@ -24,121 +24,163 @@ function CardPersonagem() {
     .filter((b) => b.arma);
 
   return (
-    <div className="relative w-full text-white py-5 flex" id="personagem">
-      {/* LADO ESQUERDO → Texto */}
-      <FadeIn>
-        <div className=" flex flex-col max-w-16 max-h-16 w-auto h-auto gap-1.5 ">
-          {personages.map((p, i) => (
-            <button
-              key={i}
-              className={`thumb-btn ${
-                i === index
-                  ? "active rounded-full scale-110 outline-red-600 outline-1 my-1.5 drop-shadow-[0_0_10px_red] "
-                  : ""
-              }`}
-              onClick={() => setIndex(i)}
-            >
-              <img
-                className="w-16 h-16 rounded-full"
-                src={p.mini}
-                alt={p.name}
-              />
-            </button>
-          ))}
-        </div>
-      </FadeIn>
-      <div className="max-w-[90%]">
+    <section
+      id="personagem"
+      className="relative w-full py-10 text-[#ddd]"
+    >
+      <div className="flex gap-8 w-[90%] mx-auto">
+
+        {/* MINIATURAS */}
         <FadeIn>
-          <div>
-            <h2 className=" text-center drop-shadow-[0_0_10px_red] text-black text-[clamp(20px,6vw,80px)]">
-              {personages[index].formas[forma].name}
-            </h2>
-            <p className="text-center shadow-[-5px_0_10px_black] text-[clamp(10px,2vw,25px)] ">
-              {personages[index].text}
-            </p>
+          <div className="flex flex-col gap-2">
+            {personages.map((p, i) => (
+              <button
+                key={i}
+                onClick={() => {
+                  setIndex(i);
+                  setForma(0);
+                }}
+                className={`transition ${
+                  i === index
+                    ? "scale-110 drop-shadow-[0_0_12px_red]"
+                    : "opacity-60 hover:opacity-100"
+                }`}
+              >
+                <img
+                  src={p.mini}
+                  alt={p.name}
+                  className="w-16 h-16 rounded-full border border-red-900/40"
+                />
+              </button>
+            ))}
           </div>
         </FadeIn>
-        <FadeIn>
-          <div className="flex">
-            {/* outra imagem */}
-            <div className="w-[40%] m-auto animate-[motion-top-bottom_15s_ease-in-out_infinite]">
-              {/* IMAGEM DO PERSONAGEM */}
-              <img
-                className="w-full h-auto drop-shadow-[0_0_20px_#300000] "
-                src={personages[index].formas[forma].img}
-                alt="personagem"
-              />
+
+        {/* CONTEÚDO PRINCIPAL */}
+        <div className="flex-1 space-y-8">
+
+          {/* TÍTULO */}
+          <FadeIn>
+            <div className="text-center space-y-2">
+              <h2 className="text-[clamp(24px,6vw,64px)] tracking-widest text-red-700 drop-shadow-[0_0_15px_#300000]">
+                {personages[index].formas[forma].name}
+              </h2>
+              <p className="text-[#bbb] text-sm max-w-2xl mx-auto">
+                {personages[index].text}
+              </p>
             </div>
-            <div className="flex flex-col gap-2.5 w-[50%] justify-center items-center animate-motion-top-bottom ">
-              {/* GOLPES */}
-              {golpes.map((golpe) => (
-                <div
-                  key={golpe.id}
-                  className="w-full drop-shadow-[0_0_20px_#300000]"
-                >
-                  <div className="bg-white text-black flex justify-between items-center py-[3px] px-[5px]  text-[clamp(10px,2vw,20px)]">
-                    <h3>{golpe.name}</h3>
-                    <p>{golpe.pd}</p>
+          </FadeIn>
+
+          {/* IMAGEM + HABILIDADES */}
+          <FadeIn>
+            <div className="flex flex-col lg:flex-row gap-10 items-center">
+
+              {/* IMAGEM */}
+              <div className="relative w-full lg:w-[40%] flex justify-center">
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent blur-xl rounded-full" />
+                <img
+                  src={personages[index].formas[forma].img}
+                  alt="personagem"
+                  className="relative z-10 w-full max-w-md drop-shadow-[0_0_25px_#300000]"
+                />
+              </div>
+
+              {/* HABILIDADES */}
+              <div className="w-full lg:w-[60%] space-y-6">
+
+                {/* GOLPES */}
+                {golpes.length > 0 && (
+                  <div>
+                    <h4 className="text-red-600 tracking-widest text-sm mb-3">
+                      HABILIDADES
+                    </h4>
+
+                    <div className="space-y-3">
+                      {golpes.map((golpe) => (
+                        <div
+                          key={golpe.id}
+                          className="border border-red-900/40 bg-[#0a0000]"
+                        >
+                          <div className="flex justify-between items-center px-3 py-2">
+                            <h3 className="text-red-500 tracking-wide">
+                              {golpe.name}
+                            </h3>
+                            <span className="text-[#aaa] text-sm">
+                              {golpe.pd} 
+                            </span>
+                          </div>
+                          <div className="px-3 py-2 text-sm text-[#ccc] bg-black/70">
+                            {golpe.desc}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div className="bg-black py-1 px-2  text-[clamp(8px,2vw,16px)]">
-                    <p>{golpe.desc}</p>
+                )}
+
+                {/* ARMAS */}
+                {armas.length > 0 && (
+                  <div>
+                    <h4 className="text-red-600 tracking-widest text-sm mb-3">
+                      ARMAS
+                    </h4>
+
+                    <div className="space-y-3">
+                      {armas.map((arma) => (
+                        <div
+                          key={arma.id}
+                          className="border border-red-900/40 bg-[#120000]"
+                        >
+                          <div className="px-3 py-2 text-red-500">
+                            {arma.arma}
+                          </div>
+                          <div className="px-3 py-2 text-sm text-[#ccc] bg-black/70">
+                            {arma.descArma}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
-              {/* ARMAS */}
-              {armas.map((arma) => (
-                <div
-                  key={arma.id}
-                  className="w-full drop-shadow-[0_0_20px_#300000]"
-                >
-                  <div className="bg-red-700 text-black flex justify-between items-center py-[3px] px-[5px]  text-[clamp(10px,2vw,20px)]">
-                    <h3>{arma.arma}</h3>
-                  </div>
-                  <div className="bg-black py-1 px-2  text-[clamp(8px,2vw,16px)]">
-                    <p>{arma.descArma}</p>
-                  </div>
-                </div>
-              ))}
+                )}
+              </div>
             </div>
-          </div>
-        </FadeIn>
-        <FadeIn>
-          <div className="w-full bg-linear-to-l from-transparent via-[#000000] to-transparent py-1">
-            <div className="flex w-auto h-auto gap-1.5 items-center justify-center">
+          </FadeIn>
+
+          {/* FORMAS */}
+          <FadeIn>
+            <div className="flex justify-center gap-3 py-4 bg-linear-to-r from-transparent via-black/80 to-transparent">
               {personages[index].formas.map((f, i) => (
                 <button
                   key={i}
-                  onClick={() => {
-                    setForma(i);
-                  }}
-                  className={` ${
+                  onClick={() => setForma(i)}
+                  className={`transition ${
                     i === forma
-                      ? "rounded-full scale-110 outline-red-600 outline-1 my-1.5 drop-shadow-[0_0_10px_red] "
-                      : ""
+                      ? "scale-110 drop-shadow-[0_0_12px_red]"
+                      : "opacity-60 hover:opacity-100"
                   }`}
                 >
                   <img
-                    className="w-16 h-16 rounded-full"
-                    src={f.img}
+                    src={f.icon}
                     alt={f.name}
+                    className="w-14 h-14 rounded-full border border-red-900/40"
                   />
                 </button>
               ))}
             </div>
-          </div>
-        </FadeIn>
-        <FadeIn>
-          <div className="flex flex-col text-center items-center py-5">
-            <div className="w-full flex justify rounded-[10px] drop-shadow-[0_0_20px_#300000]">
-              <p className="bg-black py-1.5 px-2.5 text-[clamp(10px,2vw,16px)]">
+          </FadeIn>
+
+          {/* ABOUT */}
+          <FadeIn>
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="bg-[#12000080] px-4 py-3 text-sm drop-shadow-[0_0_15px_#180000]">
                 {personages[index].about}
               </p>
             </div>
-          </div>
-        </FadeIn>
+          </FadeIn>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-export default CardPersonagem;
+export default Cards;

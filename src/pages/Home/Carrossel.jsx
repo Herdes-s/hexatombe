@@ -31,20 +31,22 @@ function Carrossel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % carrossel.length);
-    }, 5000);
+    }, 6500);
     return () => clearInterval(interval);
   }, [carrossel.length]);
 
   return (
-    <section className="w-full h-[500px] bg-linear-to-b from-[#000000] via-[#300000] to-[#000000] relative">
-      <div className="max-w-[80%] h-full mx-auto relative">
+    <section className="w-full h-[520px] relative overflow-hidden">
+      <div className="absolute inset-0 bg-linear-to-b from-black via-[#180000] to-black opacity-90 z-0" />
+      <div className="max-w-[85%] h-full mx-auto relative z-10 flex items-center justify-center">
         <div className="flex items-center justify-center gap-10 absolute inset-0">
-          <FadeIn>
+          <FadeIn key={index}>
             <img
-              className="m-auto max-w-full max-h-[380px]  drop-shadow-[0_0_20px_#300000] rounded-2xl "
+              className="max-w-full max-h-[400px] rounded-xl drop-shadow-[0_0_40px_#180000] transition-all duration-1000 ease-in-out animate-[slowZoom_5s_linear_infinite] "
               src={carrossel[index]}
               alt="hexa-cenas"
             />
+            <div className="absolute bottom-20 w-[60%] h-16 bg-black/60 blur-2xl rounded-full" />
           </FadeIn>
         </div>
       </div>

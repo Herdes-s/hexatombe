@@ -7,12 +7,14 @@ function Informations() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
+  const [activeForm, setActiveForm] = useState(0);
 
   useEffect(() => {
     setTimeout(() => setShow(true), 500);
   }, []);
 
   const Personage = AllPersonas.find((p) => p.id.toString() === id);
+  const CurrentFormas = Personage ? Personage.formas[activeForm] : null;
 
   if (!Personage) {
     return <p>Personagem não encontrado!</p>;
@@ -34,7 +36,7 @@ function Informations() {
             Retornar ao Arquivo
           </button>
           <h2 className="text-center text-[3.5rem] tracking-widest text-red-700 mt-4">
-            {Personage.formas[0].name}
+            {CurrentFormas.name}
           </h2>
           <p className="text-center text-[#aaa] mt-2 mb-16 italic">
             {Personage.sitacao}
@@ -45,18 +47,28 @@ function Informations() {
               <p className="opacity-70">{Personage.sobre[1].sobre02}</p>
               <p className="opacity-50">{Personage.sobre[2].sobre03}</p>
             </div>
-            <div className="w-[1px] bg-gradient-to-b from-transparent via-red-900/40 to-transparent" />
+            <div className="w-px bg-linear-to-b from-transparent via-red-900/40 to-transparent" />
 
             <div className="relative px-6 py-6 flex flex-col h-full bg-linear-to-t from-[#200000] via-[#150000] to-[#0b0000]">
-              <div>
-                <h2 className="text-center text-sm tracking-widest text-[#bbb] mb-4">
-                  {Personage.formas[1].name}
-                </h2>
+              <div className="flex justify-around">
+                {Personage.formas.map((formas, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveForm(index)}
+                    className={`text-xs tracking-widest pb-1 transition ${
+                      activeForm === index
+                        ? "text-red-600 border-b border-red-600"
+                        : "text-[#777] hover:text-[#bbb]"
+                    } `}
+                  >
+                    {formas.name}
+                  </button>
+                ))}
               </div>
               <div className="flex-1 flex items-center justify-center">
                 <img
-                  className="h-[24rem] object-contain drop-shadow-[0_0_50px_rgba(0,0,0,0.9)]"
-                  src={Personage.formas[0].img}
+                  className="h-96 object-contain drop-shadow-[0_0_50px_rgba(0,0,0,0.9)]"
+                  src={CurrentFormas.img}
                   alt="Personagem"
                 />
               </div>
@@ -83,10 +95,12 @@ function Informations() {
                       {Personage.status}
                     </span>
                   </p>
-                  <p>
-                    <span className="text-[#888]">Intérprete:</span>{" "}
-                    {Personage.interprete}
-                  </p>
+                  {Personage.interprete && (
+                    <p>
+                      <span className="text-[#888]">Intérprete:</span>{" "}
+                      {Personage.interprete}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

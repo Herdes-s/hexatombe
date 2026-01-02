@@ -11,13 +11,13 @@ function FadeIn({ children }) {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting >= 0.3) {
+        if (entry.isIntersecting) {
           setShow(true);
         } else {
           setShow(false)
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     observer.observe(ref.current);
@@ -28,8 +28,8 @@ function FadeIn({ children }) {
   return (
     <div
       ref={ref}
-      className={`transition-all duration-2000 ease-out
-        ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+      className={`transition-all duration-1000 ease-out
+        ${show ? "opacity-100 translate-y-0 blur-none" : "opacity-0 translate-y-10 blur"}
       `}
     >
       {children}

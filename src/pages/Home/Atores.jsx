@@ -19,17 +19,16 @@ import henri from "../../assets/images/persona/outros-persona/henri.jpg";
 import Actor from "./components/Actor";
 import FadeIn from "../../hooks/FadeIn";
 
-
 function Atores() {
   return (
     <section className="w-full" id="elenco">
-      <div className="w-[80%] my-10 mx-auto">
+      <div className="w-[80%] max-w-[1400px] my-16 mx-auto ">
         <FadeIn>
-          <h2 className=" text-center drop-shadow-[0_0_10px_red] text-black text-[clamp(20px,6vw,80px)] ">
+          <h2 className=" text-center mb-16 drop-shadow-[0_0_10px_red] text-[#f5f5f5] text-[clamp(20px,6vw,64px)] ">
             Atores
           </h2>
         </FadeIn>
-        <div className="grid xs:grid-cols-2 grid-col-1 justify-items-center items-center justify-center gap-y-12 drop-shadow-[0_0_20px_#300000] text-white">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 justify-items-center">
           <Actor
             imgActor={bagi}
             actor="Bagi"
@@ -41,13 +40,13 @@ function Atores() {
             actor="Abelha"
             imgPersona={dalmo}
             persona="Dalmo"
-            />
+          />
           <Actor
             imgActor={cereaww}
             actor="Cereaww"
             imgPersona={aguiar}
             persona="Aguiar"
-            />
+          />
           <Actor
             imgActor={beamom}
             actor="Beamom"
@@ -59,13 +58,13 @@ function Atores() {
             actor="Caligrafo"
             imgPersona={labirinto}
             persona="Labirinto"
-            />
+          />
           <Actor
             imgActor={bastet}
             actor="Bastet"
             imgPersona={henri}
             persona="Henri"
-            />
+          />
         </div>
       </div>
     </section>

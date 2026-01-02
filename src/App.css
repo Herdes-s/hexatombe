@@ -6,7 +6,12 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 
 body {
-  background-color: black;
+  background: radial-gradient(
+  circle at top,
+  #180000 0%,
+  #0a0000 40%,
+  #000 100%
+);
   color: white;
 }
 
@@ -29,13 +34,12 @@ p {
 @theme {
   --animate-motion-top-bottom: motion-top-bottom 10s ease-in-out infinite;
 
-  @keyframes motion-top-bottom {
-    0%,
-    100% {
-      transform: translateY(0) skew(-5deg, -5deg);
+  @keyframes slowZoom {
+    0% {
+      transform: scale(1);
     }
-    50% {
-      transform: translateY(10px) skew(-2deg, -5deg);
+    100% {
+      transform: scale(1.05);
     }
   }
 

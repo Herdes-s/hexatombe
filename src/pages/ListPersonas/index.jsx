@@ -30,7 +30,7 @@ function ListPersonas() {
   return (
     <>
       {/* CONTAINER DO MUNDO */}
-      <section className="relative min-h-screen overflow-hidden">
+      <section className="relative min-h-screen overflow-hidden pb-16">
         {/* BACKGROUND AAA */}
         <div className="absolute inset-0 -z-10">
           {/* Base escura */}
