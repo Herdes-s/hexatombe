@@ -1,7 +1,7 @@
 import sacrificio from "../../assets/images/Simbulos/sacrificio.png";
 import sangue from "../../assets/images/Simbulos/sangue.png";
 import fundoSection from "../../assets/logos/fundo-section-4.jpg";
-import ilustracaoCultista from "../../assets/logos/cultista02.png";
+import ilustracaoCultista from "../../assets/logos/Cultista02.png";
 import logoHexaBlack from "../../assets/logos/logo-hexa-black.png";
 import { useEffect, useState } from "react";
 import FadeIn from "../../hooks/FadeIn";
