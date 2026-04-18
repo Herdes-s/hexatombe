@@ -6,14 +6,14 @@ import jaeIcon from "../assets/images/persona/aleatorias/Jae-icon.png";
 import kemiIcon from "../assets/images/persona/aleatorias/Kemi-icon.png";
 import aguiarIcon from "../assets/images/persona/aleatorias/Aguiar-icon.png";
 import labirintoIcon from "../assets/images/persona/aleatorias/labirinto-icon.png";
-import henriIcon from "../assets/images/persona/aleatorias/henri-icon.png";
+import henriIcon from "../assets/images/persona/aleatorias/henri-Icon.png";
 
 {
   /* Foto grande com mascaras */
 }
 import dalmoMascIcon from "../assets/images/persona/aleatorias/Colosso-icon.png";
 import jaeMascIcon from "../assets/images/persona/aleatorias/X-icon.png";
-import kemiMascIcon from "../assets/images/persona/aleatorias/-icon.png";
+import kemiMascIcon from "../assets/images/persona/aleatorias/-Icon.png";
 import aguiarMascIcon from "../assets/images/persona/aleatorias/mutilador-icon.png";
 import labirintoMascIcon from "../assets/images/persona/aleatorias/lab-icon.png";
 import henriMascIcon from "../assets/images/persona/aleatorias/henriMasc-icon.png";
