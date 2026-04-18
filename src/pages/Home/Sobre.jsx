@@ -1,5 +1,5 @@
-import dalmoColosso from "../../assets/images/persona/background/Dalmo-colosso.png";
-import jonasAguiar from "../../assets/images/persona/background/Jonas-aguiar-noturno.png";
+import dalmoColosso from "../../assets/images/persona/background/Dalmo-Colosso.png";
+import jonasAguiar from "../../assets/images/persona/background/Jonas-Aguiar-Noturno.png";
 import kemi from "../../assets/images/persona/background/kemi.png";
 import jaeYoon from "../../assets/images/persona/background/jae.png";
 import labirinto from "../../assets/images/persona/background/labirinto.png";
