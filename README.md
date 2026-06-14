@@ -86,7 +86,7 @@ Para executar este projeto localmente, siga os passos abaixo:
 
 ## 🔗 Link de Acesso
 
-Confira o projeto online: [**Visualizar Hexatombe**]("https://hexatombe-omega.vercel.app/")
+Confira o projeto online: [**Visualizar Hexatombe**](https://hexatombe-omega.vercel.app/)
 
 ---
 
