@@ -24,41 +24,10 @@ function Cards() {
     .filter((b) => b.arma);
 
   return (
-    <section
-      id="personagem"
-      className="relative w-full py-10 text-[#ddd]"
-    >
-      <div className="flex gap-8 w-[90%] mx-auto">
-
-        {/* MINIATURAS */}
-        <FadeIn>
-          <div className="flex flex-col gap-2">
-            {personages.map((p, i) => (
-              <button
-                key={i}
-                onClick={() => {
-                  setIndex(i);
-                  setForma(0);
-                }}
-                className={`transition ${
-                  i === index
-                    ? "scale-110 drop-shadow-[0_0_12px_red]"
-                    : "opacity-60 hover:opacity-100"
-                }`}
-              >
-                <img
-                  src={p.mini}
-                  alt={p.name}
-                  className="w-16 h-16 rounded-full border border-red-900/40"
-                />
-              </button>
-            ))}
-          </div>
-        </FadeIn>
-
+    <section id="personagem" className="relative w-full py-10 text-[#ddd]">
+      <div className=" w-full ">
         {/* CONTEÚDO PRINCIPAL */}
         <div className="flex-1 space-y-8">
-
           {/* TÍTULO */}
           <FadeIn>
             <div className="text-center space-y-2">
@@ -72,76 +41,95 @@ function Cards() {
           </FadeIn>
 
           {/* IMAGEM + HABILIDADES */}
+          {/* MINIATURAS */}
           <FadeIn>
-            <div className="flex flex-col lg:flex-row gap-10 items-center">
-
-              {/* IMAGEM */}
-              <div className="relative w-full lg:w-[40%] flex justify-center">
-                <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent blur-xl rounded-full" />
-                <img
-                  src={personages[index].formas[forma].img}
-                  alt="personagem"
-                  className="relative z-10 w-full max-w-md drop-shadow-[0_0_25px_#300000]"
-                />
+            <div className="flex flex-row justify-between">
+              <div className="flex flex-col gap-2">
+                {personages.map((p, i) => (
+                  <button
+                    key={i}
+                    onClick={() => {
+                      setIndex(i);
+                      setForma(0);
+                    }}
+                    className={`transition ${
+                      i === index
+                        ? "scale-110 drop-shadow-[0_0_12px_red]"
+                        : "opacity-60 hover:opacity-100"
+                    }`}
+                  >
+                    <img
+                      src={p.mini}
+                      alt={p.name}
+                      className=" h-16 rounded-full border border-red-900/40"
+                    />
+                  </button>
+                ))}
               </div>
-
-              {/* HABILIDADES */}
-              <div className="w-full lg:w-[60%] space-y-6">
-
-                {/* GOLPES */}
-                {golpes.length > 0 && (
-                  <div>
-                    <h4 className="text-red-600 tracking-widest text-sm mb-3">
-                      HABILIDADES
-                    </h4>
-
-                    <div className="space-y-3">
-                      {golpes.map((golpe) => (
-                        <div
-                          key={golpe.id}
-                          className="border border-red-900/40 bg-[#0a0000]"
-                        >
-                          <div className="flex justify-between items-center px-3 py-2">
-                            <h3 className="text-red-500 tracking-wide">
-                              {golpe.name}
+              <div className=" flex flex-1 flex-col lg:flex-row gap-10 items-center">
+                {/* IMAGEM */}
+                <div className="relative w-full lg:w-[40%] flex justify-center">
+                  <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent blur-xl rounded-full" />
+                  <img
+                    src={personages[index].formas[forma].img}
+                    alt="personagem"
+                    className="relative z-10 w-64 max-w-md drop-shadow-[0_0_25px_#300000]"
+                  />
+                </div>
+                {/* HABILIDADES */}
+                <div className="w-full lg:w-[60%] space-y-6">
+                  {/* GOLPES */}
+                  {golpes.length > 0 && (
+                    <div>
+                      <h4 className="text-red-600 tracking-widest text-sm mb-3">
+                        HABILIDADES
+                      </h4>
+                      <div className="space-y-3">
+                        {golpes.map((golpe) => (
+                          <div
+                            key={golpe.id}
+                            className="border border-red-900/40 bg-[#0a0000]"
+                          >
+                            <div className="flex justify-between items-center px-3 py-2">
+                              <h3 className="text-red-500 tracking-wide">
+                                {golpe.name}
+                              </h3>
+                              <span className="text-[#aaa] text-sm">
+                                {golpe.pd}
+                              </span>
+                            </div>
+                            <p className="px-3 py-2 text-sm text-[#ccc] bg-black/70">
+                              {golpe.desc}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {/* ARMAS */}
+                  {armas.length > 0 && (
+                    <div>
+                      <h4 className="text-red-600 tracking-widest text-sm mb-3">
+                        ARMAS
+                      </h4>
+                      <div className="space-y-3">
+                        {armas.map((arma) => (
+                          <div
+                            key={arma.id}
+                            className="border border-red-900/40 bg-[#120000]"
+                          >
+                            <h3 className="px-3 py-2 text-red-500">
+                              {arma.arma}
                             </h3>
-                            <span className="text-[#aaa] text-sm">
-                              {golpe.pd} 
-                            </span>
+                            <p className="px-3 py-2 text-sm text-[#ccc] bg-black/70">
+                              {arma.descArma}
+                            </p>
                           </div>
-                          <div className="px-3 py-2 text-sm text-[#ccc] bg-black/70">
-                            {golpe.desc}
-                          </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-
-                {/* ARMAS */}
-                {armas.length > 0 && (
-                  <div>
-                    <h4 className="text-red-600 tracking-widest text-sm mb-3">
-                      ARMAS
-                    </h4>
-
-                    <div className="space-y-3">
-                      {armas.map((arma) => (
-                        <div
-                          key={arma.id}
-                          className="border border-red-900/40 bg-[#120000]"
-                        >
-                          <div className="px-3 py-2 text-red-500">
-                            {arma.arma}
-                          </div>
-                          <div className="px-3 py-2 text-sm text-[#ccc] bg-black/70">
-                            {arma.descArma}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
           </FadeIn>

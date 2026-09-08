@@ -5,7 +5,7 @@ function Footer() {
   px-5 pb-[30px] border-t border-[#800000] overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,0,0,0.15),transparent_60%)] pointer-events-none" />
-      <div className="relative max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 z-10">
+      <div className="relative max-w-300 mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 z-10">
         <div>
           <h2 className="text-[#b10000] text-[clamp(22px,2.5vw,32px)] tracking-[0.4em] drop-shadow-[0_0_15px_#ff0000]">
             HEXATOMBE

@@ -11,7 +11,7 @@ function Header() {
   return (
     <header className="bg-linear-to-b from-black via-[#120000] to-transparent relative z-20 border-b border-red-900/30 shadow-[0_10px_30px_rgba(0,0,0,0.8)] bg-black/70 backdrop-blur-sm">
       <div
-        className={`flex items-center justify-between px-[10%] transition-all  duration-700 ease-in-out ${
+        className={`flex items-center justify-between max-w-300 px-10 transition-all  duration-700 ease-in-out ${
           show ? "translate-y-0 " : "-translate-y-10"
         }`}
       >

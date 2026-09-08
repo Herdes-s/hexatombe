@@ -38,7 +38,7 @@ function Carrossel() {
   return (
     <section className="w-full h-[520px] relative overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-b from-black via-[#180000] to-black opacity-90 z-0" />
-      <div className="max-w-[85%] h-full mx-auto relative z-10 flex items-center justify-center">
+      <div className="max-w-300 h-full mx-auto relative z-10 flex items-center justify-center">
         <div className="flex items-center justify-center gap-10 absolute inset-0">
           <FadeIn key={index}>
             <img

@@ -22,7 +22,7 @@ import FadeIn from "../../hooks/FadeIn";
 function Atores() {
   return (
     <section className="w-full" id="elenco">
-      <div className="w-[80%] max-w-[1400px] my-16 mx-auto ">
+      <div className="w-300 px-10 max-w-[1400px] my-16 mx-auto ">
         <FadeIn>
           <h2 className=" text-center mb-16 drop-shadow-[0_0_10px_red] text-[#f5f5f5] text-[clamp(20px,6vw,64px)] ">
             Atores
