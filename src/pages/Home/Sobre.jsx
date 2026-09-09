@@ -33,7 +33,7 @@ function Sobre() {
             <h2 className="py-[50px] text-center drop-shadow-[0_0_15px_#ff0000] text-[#dadada] text-[28px]">
               O que é o Hexatombe?
             </h2>
-            <p className="text-[clamp(10px,2vw,18px)] drop-shadow-[0_0_15px_#9f0000] text-[#b6b6b6] z-10 leading-relaxed tracking-wide">
+            <p className="text-[clamp(1rem, 0.25vw + 0.94rem, 1.125rem)] drop-shadow-[0_0_15px_#9f0000] text-[#b6b6b6] z-10 leading-relaxed tracking-wide">
               A Hexatombe… é difícil de explicar pra quem nunca sentiu ela de
               perto. Não é só um ritual, nem só um massacre — é uma brecha. Quando
               a Hexatombe acontece, o véu entre o nosso mundo e o Outro Lado se

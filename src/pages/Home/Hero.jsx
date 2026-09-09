@@ -27,7 +27,7 @@ function Hero() {
         {/* LOGO */}
         <div className="w-full flex items-center justify-center relative py-6 ">
           <h1 className="sr-only">Hexatombe</h1>
-          <div className="drop-shadow-[0_0_15px_#ff0000] w-[40%] flex justify-center">
+          <div className="drop-shadow-[0_0_15px_#ff0000] w-65 lg:w-100 flex justify-center">
             <FadeIn>
               <img
                 className="w-[90%] "
@@ -39,7 +39,7 @@ function Hero() {
         </div>
         {/* TEXTO + IMAGEM */}
         <div className="flex flex-col md:flex-row w-full justify-center items-center gap-8">
-          <div className="w-full md:w-[60%] text-justify text-[clamp(10px,2vw,16px)] drop-shadow-[0_5px_5px_#000000] flex flex-col gap-4 text-[#d4d4d4] relative z-10">
+          <div className="w-full md:w-[60%] text-justify text-[clamp(1rem, 0.25vw + 0.94rem, 1.125rem)] drop-shadow-[0_5px_5px_#000000] flex flex-col gap-4 text-[#d4d4d4] relative z-10">
             <FadeIn>
               <p className="opacity-[0.9] leading-relaxed tracking-wide">
                 Ninguém sabe ao certo quando começou, mas todos sabem que o
