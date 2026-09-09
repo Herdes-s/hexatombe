@@ -11,11 +11,11 @@ function Header() {
   return (
     <header className="bg-linear-to-b from-black via-[#120000] to-transparent relative z-20 border-b border-red-900/30 shadow-[0_10px_30px_rgba(0,0,0,0.8)] bg-black/70 backdrop-blur-sm">
       <div
-        className={`flex items-center justify-between max-w-300 m-auto px-10 transition-all  duration-700 ease-in-out ${
+        className={`flex items-center justify-between max-w-300  h-20 m-auto px-10 transition-all  duration-700 ease-in-out ${
           show ? "translate-y-0 " : "-translate-y-10"
         }`}
       >
-        <div className="w-[15%] h-auto text-center">
+        <div className="w-25 h-auto text-center">
           <img
             src={logoOrdem}
             alt="Ordem Paranormal — logo"
@@ -24,7 +24,7 @@ function Header() {
         </div>
 
         <nav>
-          <ul className="flex gap-5 list-none text-[clamp(10px,2vw,18px)]">
+          <ul className="flex gap-5 list-none text-[clamp(1rem, 0.25vw + 0.94rem, 1.125rem)]">
             <li>
               <a
                 href="#"
