@@ -43,8 +43,8 @@ function Cards() {
           {/* IMAGEM + HABILIDADES */}
           {/* MINIATURAS */}
           <FadeIn>
-            <div className="flex flex-row justify-between">
-              <div className="flex flex-col gap-2">
+            <div className="flex flex-col lg:flex-row justify-between">
+              <div className="flex flex-row lg:flex-col gap-2">
                 {personages.map((p, i) => (
                   <button
                     key={i}
@@ -61,7 +61,7 @@ function Cards() {
                     <img
                       src={p.mini}
                       alt={p.name}
-                      className=" h-16 rounded-full border border-red-900/40"
+                      className=" h-full lg:h-16 rounded-full border border-red-900/40"
                     />
                   </button>
                 ))}

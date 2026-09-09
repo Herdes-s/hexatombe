@@ -21,7 +21,7 @@ function Sobre() {
   return (
     <section className="text-justify relative overflow-hidden ">
       <FadeIn>
-        <div className="w-300 px-10 mx-auto py-[100px]">
+        <div className="max-w-300 px-10 mx-auto py-[100px]">
           <div>
             <img
               className="hidden md:block absolute z-0 top-1/2 right-[5%] -translate-y-1/2 h-[340px] opacity-40 pointer-events-none"

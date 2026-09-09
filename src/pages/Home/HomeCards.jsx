@@ -8,7 +8,7 @@ function PersonagemCard() {
     <section className="relative mt-32 overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-b from-black via-[#120000] to-black opacity-80 pointer-events-none" />
 
-      <div className="relative w-300 px-10 mx-auto">
+      <div className="relative max-w-300 px-10 mx-auto">
         <div className="text-center py-5">
           <FadeIn>
             <h2 className="text-[clamp(24px,6vw,64px)] tracking-widest text-red-700 drop-shadow-[0_0_15px_#300000] mb-10">

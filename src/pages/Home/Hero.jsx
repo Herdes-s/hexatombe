@@ -20,7 +20,7 @@ function Hero() {
     >
       <div className="absolute inset-0 bg-black/40 shadow-[inset_0_0_120px_#000] z-0" />
       <div
-        className={`w-300 px-10 mx-auto relative transition-all  duration-1000 ease-in-out ${
+        className={`max-w-300 px-10 mx-auto relative transition-all  duration-1000 ease-in-out ${
           show ? "translate-y-0 opacity-100 " : "-translate-y-10 opacity-0"
         }`}
       >

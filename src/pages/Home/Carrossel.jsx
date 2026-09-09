@@ -42,7 +42,7 @@ function Carrossel() {
         <div className="flex items-center justify-center gap-10 absolute inset-0">
           <FadeIn key={index}>
             <img
-              className="max-w-full max-h-[400px] rounded-xl drop-shadow-[0_0_40px_#180000] transition-all duration-1000 ease-in-out animate-[slowZoom_5s_linear_infinite] "
+              className="max-w-full px-2 max-h-[400px] rounded-xl drop-shadow-[0_0_40px_#180000] transition-all duration-1000 ease-in-out animate-[slowZoom_5s_linear_infinite] "
               src={carrossel[index]}
               alt="hexa-cenas"
             />
