@@ -5,7 +5,7 @@ function Personas({ FilterAllPersonas }) {
 
   return (
     <section >
-      <div className="grid grid-cols-6 justify-items-center py-2.5 gap-5  ">
+      <div className="m-auto grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] justify-items-center py-2.5 px-10 gap-5 max-w-300 ">
         {FilterAllPersonas.map((p) => (
           <div
             key={p.id}
