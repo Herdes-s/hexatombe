@@ -10,9 +10,9 @@ function Header({ search, setSearch, ocupacao, setOcupacao }) {
       <div className="absolute inset-0 bg-linear-to-b from-[#1a0000] to-[#050000]" />
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative flex items-center justify-between px-[10%] py-4 ">
+      <div className="max-w-300 m-auto relative flex flex-col lg:flex-row items-center justify-between px-10 py-4 ">
         {/* LOGO */}
-        <div className="w-40 cursor-pointer transition-all duration-500 hover:drop-shadow-[0_0_15px_rgba(120,0,0,0.8)]">
+        <div className=" w-25 cursor-pointer transition-all duration-500 hover:drop-shadow-[0_0_15px_rgba(120,0,0,0.8)]">
           <img
             src={logoHexa}
             alt="Ordem Paranormal — logo"
@@ -24,7 +24,7 @@ function Header({ search, setSearch, ocupacao, setOcupacao }) {
         <nav className="flex items-center gap-4">
           {/* SEARCH */}
           <div
-            className="flex items-center gap-2 bg-black/70 border border-[#300000] px-3 py-1.5 text-[#e0e0e0]
+            className="  flex items-center gap-2 bg-black/70 border border-[#300000] px-3 py-1.5 text-[#e0e0e0]
               shadow-[inset_0_0_10px_rgba(0,0,0,0.8)]
             "
           >
