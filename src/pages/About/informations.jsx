@@ -26,7 +26,7 @@ function Informations() {
         show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
-      <section className="relative w-[85%] mx-auto mt-16 mb-24">
+      <section className="relative max-w-300 p-10 mx-auto">
         <div className="">
           <button
             onClick={() => navigate(-1)}
@@ -35,13 +35,13 @@ function Informations() {
             <ChevronLeft size={18} />
             Retornar ao Arquivo
           </button>
-          <h2 className="text-center text-[3.5rem] tracking-widest text-red-700 mt-4">
+          <h2 className="text-center text-[clamp(2.875rem,1.27vw+2.55rem,3.5rem)] wrap-break-word tracking-widest text-red-700 mt-4">
             {CurrentFormas.name}
           </h2>
           <p className="text-center text-[#aaa] mt-2 mb-16 italic">
             {Personage.sitacao}
           </p>
-          <div className="px-2.5 mt-auto grid grid-cols-[1fr_auto_420px] gap-12 items-center">
+          <div className="px-2.5 mt-auto flex flex-col-reverse lg:flex-row gap-12 items-center">
             <div className="space-y-6 text-[#d0d0d0] leading-relaxed max-w-xl self-center">
               <p className="opacity-90">{Personage.sobre[0].sobre01}</p>
               <p className="opacity-70">{Personage.sobre[1].sobre02}</p>
@@ -55,7 +55,7 @@ function Informations() {
                   <button
                     key={index}
                     onClick={() => setActiveForm(index)}
-                    className={`text-xs tracking-widest pb-1 transition ${
+                    className={`text-xs tracking-widest p-5 transition ${
                       activeForm === index
                         ? "text-red-600 border-b border-red-600"
                         : "text-[#777] hover:text-[#bbb]"
