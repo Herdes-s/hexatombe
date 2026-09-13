@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import logoOrdem from "../../assets/logos/logoOrdem.png";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate()
 
   useEffect(() => {
     setTimeout(() => setShow(true), 500);
@@ -19,7 +21,8 @@ function Header() {
           <img
             src={logoOrdem}
             alt="Ordem Paranormal — logo"
-            className="w-full h-auto hover:drop-shadow-[0_0_15px_rgba(255,0,0,0.4)]"
+            onClick={() => navigate("/")}
+            className="w-full h-auto hover:drop-shadow-[0_0_15px_rgba(255,0,0,0.4)] cursor-pointer"
           />
         </div>
 

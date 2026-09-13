@@ -51,4 +51,13 @@ p {
       transform: rotate(360deg) translateX(150px) rotate(-360deg);
     }
   }
+
+  @keyframes mecher {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100vw 0;
+    }
+  }
 }
