@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import FadeIn from "../../hooks/FadeIn";
 
 function Hero() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState<boolean>(false);
 
   useEffect(() => {
     setTimeout(() => setShow(true), 500);

@@ -30,8 +30,9 @@ import henri from "../assets/images/persona/outros-persona/henri.jpg";
 
 import semMasc from "../assets/images/persona/aleatorias/semMasc.jpg";
 import comMasc from "../assets/images/persona/aleatorias/comMasc.jpg";
+import type { Personas } from "../types/TypesProtagonist";
 
-const Protagonists = [
+const Protagonists: Personas[] = [
   {
     mini: dalmo,
     text: " O sangue poderia até pagar bem, mas para Dalmo, A glória era viciante.",

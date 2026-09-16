@@ -16,10 +16,10 @@ import labirinto from "../../assets/images/persona/outros-persona/labirinto-pers
 import bastet from "../../assets/images/persona/outros-persona/Bastet.jpg";
 import henri from "../../assets/images/persona/outros-persona/henri.jpg";
 
-import Actor from "./components/Actor";
+import Actor from "./ActorsStyles/Actor";
 import FadeIn from "../../hooks/FadeIn";
 
-function Atores() {
+function Actors() {
   return (
     <section className="w-full" id="elenco">
       <div className="max-w-300 px-10 my-16 mx-auto ">
@@ -71,4 +71,4 @@ function Atores() {
   );
 }
 
-export default Atores;
+export default Actors;

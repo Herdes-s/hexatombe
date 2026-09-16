@@ -1,9 +1,9 @@
 import todosJuntos from "../../assets/images/persona/aleatorias/todos-juntos.jpg";
 
-import Cards from "./components/Cards";
+import ProtagonistDetails from "./ProtagonistShowcase/ProtagonistDetails";
 import FadeIn from "../../hooks/FadeIn";
 
-function PersonagemCard() {
+function ProtagonistShowcase() {
   return (
     <section className="relative mt-32 overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-b from-black via-[#120000] to-black opacity-80 pointer-events-none" />
@@ -27,11 +27,11 @@ function PersonagemCard() {
           </FadeIn>
         </div>
         <div className="relative z-10">
-          <Cards />
+          <ProtagonistDetails />
         </div>
       </div>
     </section>
   );
 }
 
-export default PersonagemCard;
+export default ProtagonistShowcase;

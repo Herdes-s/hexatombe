@@ -5,7 +5,7 @@ function BottomNav() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path: string): boolean => location.pathname === path;
 
   return (
     <nav className="fixed bottom-0 left-0 w-full h-16 bg-linear-to-t to-[#240000ce] from-[#000000] border-t border-[#220c0cce] flex justify-around items-center z-50">

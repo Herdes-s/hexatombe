@@ -12,9 +12,9 @@ import hexa11 from "../../assets/images/persona/carrosel/hexa-11.jpg";
 import { useEffect, useState } from "react";
 import FadeIn from "../../hooks/FadeIn";
 
-function Carrossel() {
-  const [index, setIndex] = useState(0);
-  const carrossel = [
+function Carousel() {
+  const [index, setIndex] = useState<number>(0);
+  const carousel = [
     hexa01,
     hexa02,
     hexa03,
@@ -30,10 +30,10 @@ function Carrossel() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % carrossel.length);
+      setIndex((prev) => (prev + 1) % carousel.length);
     }, 6500);
     return () => clearInterval(interval);
-  }, [carrossel.length]);
+  }, [carousel.length]);
 
   return (
     <section className="w-full h-[520px] relative overflow-hidden">
@@ -43,7 +43,7 @@ function Carrossel() {
           <FadeIn key={index}>
             <img
               className="max-w-full px-2 max-h-[400px] rounded-xl drop-shadow-[0_0_40px_#180000] transition-all duration-1000 ease-in-out animate-[slowZoom_5s_linear_infinite] "
-              src={carrossel[index]}
+              src={carousel[index]}
               alt="hexa-cenas"
             />
             <div className="absolute bottom-20 w-[60%] h-16 bg-black/60 blur-2xl rounded-full" />
@@ -54,4 +54,4 @@ function Carrossel() {
   );
 }
 
-export default Carrossel;
+export default Carousel;

@@ -2,23 +2,23 @@ import { useState } from "react";
 import personages from "../../../data/Protagonists";
 import FadeIn from "../../../hooks/FadeIn";
 
-function Cards() {
+function ProtagonistDetails() {
   const [index, setIndex] = useState(0);
   const [forma, setForma] = useState(0);
 
   const golpes = [1, 2, 3, 4]
     .map((n) => ({
-      name: personages[index][`nameGolp${n}`],
-      pd: personages[index][`PDGolp${n}`],
-      desc: personages[index][`descriptionGolp${n}`],
+      name: personages[index]?.[`nameGolp${n}`],
+      pd: personages[index]?.[`PDGolp${n}`],
+      desc: personages[index]?.[`descriptionGolp${n}`],
       id: n,
     }))
     .filter((g) => g.name);
 
   const armas = [1, 2]
     .map((a) => ({
-      arma: personages[index][`arma${a}`],
-      descArma: personages[index][`descArma${a}`],
+      arma: personages[index]?.[`arma${a}`],
+      descArma: personages[index]?.[`descArma${a}`],
       id: a,
     }))
     .filter((b) => b.arma);
@@ -32,10 +32,10 @@ function Cards() {
           <FadeIn>
             <div className="text-center space-y-2">
               <h2 className="text-[clamp(24px,6vw,64px)] tracking-widest text-red-700 drop-shadow-[0_0_15px_#300000]">
-                {personages[index].formas[forma].name}
+                {personages[index]?.formas?.[forma]?.name}
               </h2>
               <p className="text-[#bbb] text-sm max-w-2xl mx-auto">
-                {personages[index].text}
+                {personages[index]?.text}
               </p>
             </div>
           </FadeIn>
@@ -60,7 +60,7 @@ function Cards() {
                   >
                     <img
                       src={p.mini}
-                      alt={p.name}
+                      alt={p.formas[0]?.name}
                       className=" h-full lg:h-16 rounded-full border border-red-900/40"
                     />
                   </button>
@@ -71,7 +71,7 @@ function Cards() {
                 <div className="relative w-full lg:w-[40%] flex justify-center">
                   <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent blur-xl rounded-full" />
                   <img
-                    src={personages[index].formas[forma].img}
+                    src={personages[index]?.formas?.[forma]?.img}
                     alt="personagem"
                     className="relative z-10 w-64 max-w-md drop-shadow-[0_0_25px_#300000]"
                   />
@@ -137,7 +137,7 @@ function Cards() {
           {/* FORMAS */}
           <FadeIn>
             <div className="flex justify-center gap-3 py-4 bg-linear-to-r from-transparent via-black/80 to-transparent">
-              {personages[index].formas.map((f, i) => (
+              {personages[index]?.formas?.map((f, i) => (
                 <button
                   key={i}
                   onClick={() => setForma(i)}
@@ -161,7 +161,7 @@ function Cards() {
           <FadeIn>
             <div className="max-w-3xl mx-auto text-center">
               <p className="bg-[#12000080] px-4 py-3 text-sm drop-shadow-[0_0_15px_#180000]">
-                {personages[index].about}
+                {personages[index]?.about}
               </p>
             </div>
           </FadeIn>
@@ -171,4 +171,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default ProtagonistDetails;

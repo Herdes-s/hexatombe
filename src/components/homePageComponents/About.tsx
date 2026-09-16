@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 import FadeIn from "../../hooks/FadeIn";
 
 
-function Sobre() {
-  const [index, setIndex] = useState(0);
+function About() {
+  const [index, setIndex] = useState<number>(0);
   const fotos = [dalmoColosso, jonasAguiar, kemi, jaeYoon, labirinto];
 
   useEffect(() => {
@@ -52,4 +52,4 @@ function Sobre() {
   );
 }
 
-export default Sobre;
+export default About;

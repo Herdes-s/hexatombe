@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import AllPersonas from "../../data/AllPersonas";
 import Header from "./Header";
 import Personas from "./Personas";
-import BottomNav from "../Home/components/BottomNav";
+import BottomNav from "../../components/homePageComponents/BottonHeader/BottomNav";
 
 function ListPersonas() {
   const [search, setSearch] = useState("");
