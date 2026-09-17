@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Homepage from "./pages/HomePage";
 import ListPersonas from "./pages/ListPersonas";
 import About from "./pages/About";
 import IntroPage from "./pages/IntroPage";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Atores from "../../components/homePageComponents/Actors";
-import Carrossel from "../../components/homePageComponents/Carousel";
+import Actors from "../../components/homePageComponents/Actors";
+import Carousel from "../../components/homePageComponents/Carousel";
 import Footer from "../../components/homePageComponents/Footer";
 import Header from "../../components/homePageComponents/Header";
 import Hero from "../../components/homePageComponents/Hero";
@@ -8,7 +8,7 @@ import ProtagonistShowcase from "../../components/homePageComponents/Protagonist
 import About from "../../components/homePageComponents/About";
 import BottomNav from "../../components/homePageComponents/BottonHeader/BottomNav";
 
-function Home() {
+function HomePage() {
   const [show, setShow] = useState<boolean>(false);
 
   useEffect(() => {
@@ -26,8 +26,8 @@ function Home() {
         <Hero />
         <About />
         <ProtagonistShowcase />
-        <Carrossel />
-        <Atores />
+        <Carousel />
+        <Actors />
         <Footer />
       </main>
       <BottomNav />
@@ -35,4 +35,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;
