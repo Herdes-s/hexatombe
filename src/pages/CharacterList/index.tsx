@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import AllPersonas from "../../data/AllPersonas";
-import Header from "./Header";
-import Personas from "./Personas";
+import Header from "../../components/characterListComponents/Header";
+import Personas from "../../components/characterListComponents/Personas";
 import BottomNav from "../../components/homePageComponents/BottonHeader/BottomNav";
 
 function ListPersonas() {
-  const [search, setSearch] = useState("");
-  const [ocupacao, setOcupacao] = useState("");
-  const [show, setShow] = useState(false);
+  const [search, setSearch] = useState<string>("");
+  const [ocupacao, setOcupacao] = useState<string>("");
+  const [show, setShow] = useState<boolean>(false);
 
   useEffect(() => {
     setTimeout(() => setShow(true), 200);
   }, []);
 
   const FilterAllPersonas = AllPersonas.filter((p) => {
-    const MatchName = p.formas[0].name
+    const MatchName = p.formas[0]?.name
       .toLowerCase()
       .includes(search.toLocaleLowerCase());
 

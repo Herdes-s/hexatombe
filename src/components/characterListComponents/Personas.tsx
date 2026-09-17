@@ -4,7 +4,7 @@ function Personas({ FilterAllPersonas }) {
   const navigate = useNavigate();
 
   return (
-    <section >
+    <section>
       <div className="m-auto grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] justify-items-center py-2.5 px-10 gap-5 max-w-300 ">
         {FilterAllPersonas.map((p) => (
           <div
