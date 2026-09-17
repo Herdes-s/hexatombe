@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
 import ListPersonas from "./pages/CharacterList";
 import About from "./pages/About";
 import IntroPage from "./pages/IntroPage";
