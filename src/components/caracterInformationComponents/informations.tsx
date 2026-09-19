@@ -29,7 +29,10 @@ function Informations() {
       <section className="relative max-w-300 p-10 mx-auto">
         <div className="">
           <button
-            onClick={() => navigate(-1)}
+            onClick={() => {
+              navigate(-1);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             className="flex items-center gap-1 text-[#aaa] hover:text-red-600 transition cursor-pointer"
           >
             <ChevronLeft size={18} />

@@ -11,7 +11,10 @@ function Personas({ FilterAllPersonas }: { FilterAllPersonas: Cast[] }) {
           <div
             key={p.id}
             className="group cursor-pointer"
-            onClick={() => navigate(`/about/${p.id}`)}
+            onClick={() => {
+              navigate(`/about/${p.id}`);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           >
             <div className="relative h-64 w-44 bg-linear-to-t from-[#120000] via-[#1a0000] to-[#050000] text-[#e0e0e0] shadow-[inset_0_-30px_40px_rgba(0,0,0,0.8)] overflow-hidden transition-all duration-500 ease-out group-hover:shadow-[0_0_25px_rgba(120,0,0,0.6)]">
               {/* Vinheta */}

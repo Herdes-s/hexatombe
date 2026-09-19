@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import logoHexa from "../../assets/logos/logo-hexa-white.png";
+import logoOrdem from "../../assets/logos/logoOrdem.png";
 import { Search } from "lucide-react";
 
 type propsType = {
@@ -21,7 +21,7 @@ function Header({ search, setSearch, ocupacao, setOcupacao }: propsType) {
         {/* LOGO */}
         <div className=" w-25 cursor-pointer transition-all duration-500 hover:drop-shadow-[0_0_15px_rgba(120,0,0,0.8)]">
           <img
-            src={logoHexa}
+            src={logoOrdem}
             alt="Ordem Paranormal — logo"
             className="w-full h-auto hover:drop-shadow-[0_0_10px_rgba(255,0,0,0.7)]"
             onClick={() => navigate("/")}

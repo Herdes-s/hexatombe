@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logos/logoOrdem.png";
-import temporadas from "../../data/Temporadas";
+import temporadas from "../../data/Seasons";
 import lab from "../../assets/images/Simbulos/lab.jpg";
 
 export default function OpeningScreen() {
