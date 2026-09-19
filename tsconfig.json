@@ -35,7 +35,7 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     //Configurações fundamentais para migração
-    "allowJs": true,
+    "allowJs": false,
     "checkJs": false,
 
     "moduleResolution": "bundler",
@@ -44,7 +44,7 @@
     "noEmit": true,
 
     // Recommended Options
-    "strict": false,
+    "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,

@@ -3,10 +3,10 @@ import personages from "../../../data/Protagonists";
 import FadeIn from "../../../hooks/FadeIn";
 
 function ProtagonistDetails() {
-  const [index, setIndex] = useState(0);
-  const [forma, setForma] = useState(0);
+  const [index, setIndex] = useState<number>(0);
+  const [forma, setForma] = useState<number>(0);
 
-  const golpes = [1, 2, 3, 4]
+  const golpes = ([1, 2, 3, 4] as const)
     .map((n) => ({
       name: personages[index]?.[`nameGolp${n}`],
       pd: personages[index]?.[`PDGolp${n}`],
@@ -15,7 +15,7 @@ function ProtagonistDetails() {
     }))
     .filter((g) => g.name);
 
-  const armas = [1, 2]
+  const armas = ([1] as const)
     .map((a) => ({
       arma: personages[index]?.[`arma${a}`],
       descArma: personages[index]?.[`descArma${a}`],

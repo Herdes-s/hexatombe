@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import type { Cast } from "../../types/TypesProtagonist";
 
-function Personas({ FilterAllPersonas }) {
+function Personas({ FilterAllPersonas }: { FilterAllPersonas: Cast[] }) {
   const navigate = useNavigate();
 
   return (
@@ -18,14 +19,14 @@ function Personas({ FilterAllPersonas }) {
                 {/* Personagem */}
                 <img
                   className="absolute bottom-6 left-1/2 -translate-x-1/2 h-48 transition-transform duration-700 ease-out group-hover:scale-105"
-                  src={p.formas[0].img}
+                  src={p.formas[0]?.img}
                   alt="Imagem-Persona"
                 />
               </div>
               {/* Nome */}
               <div className="absolute bottom-0 w-full bg-black/80 py-2 text-center border-t border-[#300000]">
                 <h2 className="tracking-wide text-sm font-semibold">
-                  {p.formas[0].name}
+                  {p.formas[0]?.name}
                 </h2>
               </div>
             </div>

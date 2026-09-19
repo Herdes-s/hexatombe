@@ -1,16 +1,18 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
-function FadeIn({ children }) {
+function FadeIn({ children }: { children: ReactNode }) {
   const ref = useRef(null);
 
   // COMEÇA VISÍVEL (regra de ouro)
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState<boolean>(false);
 
   useEffect(() => {
     if (!ref.current) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
+        if (!entry) return;
+
         if (entry.isIntersecting) {
           setShow(true);
         } else {

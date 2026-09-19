@@ -2,7 +2,14 @@ import { useNavigate } from "react-router-dom";
 import logoHexa from "../../assets/logos/logo-hexa-white.png";
 import { Search } from "lucide-react";
 
-function Header({ search, setSearch, ocupacao, setOcupacao }) {
+type propsType = {
+  search: string;
+  setSearch: (value: string) => void;
+  ocupacao: string;
+  setOcupacao: (value: string) => void;
+};
+
+function Header({ search, setSearch, ocupacao, setOcupacao }: propsType) {
   const navigate = useNavigate();
   return (
     <header className="relative z-20">

@@ -6,7 +6,6 @@ import labirinto from "../../assets/images/persona/background/labirinto.png";
 import { useEffect, useState } from "react";
 import FadeIn from "../../hooks/FadeIn";
 
-
 function About() {
   const [index, setIndex] = useState<number>(0);
   const fotos = [dalmoColosso, jonasAguiar, kemi, jaeYoon, labirinto];
@@ -35,15 +34,15 @@ function About() {
             </h2>
             <p className="text-[clamp(1rem, 0.25vw + 0.94rem, 1.125rem)] drop-shadow-[0_0_15px_#9f0000] text-[#b6b6b6] z-10 leading-relaxed tracking-wide">
               A Hexatombe… é difícil de explicar pra quem nunca sentiu ela de
-              perto. Não é só um ritual, nem só um massacre — é uma brecha. Quando
-              a Hexatombe acontece, o véu entre o nosso mundo e o Outro Lado se
-              rasga, e tudo que devia ficar escondido começa a atravessar. O ar
-              fica pesado, o tempo parece falhar, e coisas que não têm nome
-              começam a olhar de volta pra você. Alguns cultos fazem isso de
-              propósito, buscando poder. Outros tentam impedir, mas quase sempre
-              tarde demais. A verdade é simples: quando você vê uma Hexatombe se
-              formando… você entende que nada que conhece é seguro, e que a
-              realidade não é tão sólida quanto parece.
+              perto. Não é só um ritual, nem só um massacre — é uma brecha.
+              Quando a Hexatombe acontece, o véu entre o nosso mundo e o Outro
+              Lado se rasga, e tudo que devia ficar escondido começa a
+              atravessar. O ar fica pesado, o tempo parece falhar, e coisas que
+              não têm nome começam a olhar de volta pra você. Alguns cultos
+              fazem isso de propósito, buscando poder. Outros tentam impedir,
+              mas quase sempre tarde demais. A verdade é simples: quando você vê
+              uma Hexatombe se formando… você entende que nada que conhece é
+              seguro, e que a realidade não é tão sólida quanto parece.
             </p>
           </div>
         </div>

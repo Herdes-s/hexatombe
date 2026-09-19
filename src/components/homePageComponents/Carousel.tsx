@@ -12,6 +12,7 @@ import hexa11 from "../../assets/images/persona/carrosel/hexa-11.jpg";
 import { useEffect, useState } from "react";
 import FadeIn from "../../hooks/FadeIn";
 
+
 function Carousel() {
   const [index, setIndex] = useState<number>(0);
   const carousel = [

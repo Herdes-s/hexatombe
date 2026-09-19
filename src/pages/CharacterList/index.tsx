@@ -3,6 +3,7 @@ import AllPersonas from "../../data/AllPersonas";
 import Header from "../../components/characterListComponents/Header";
 import Personas from "../../components/characterListComponents/Personas";
 import BottomNav from "../../components/homePageComponents/BottonHeader/BottomNav";
+import type { Cast } from "../../types/TypesProtagonist";
 
 function ListPersonas() {
   const [search, setSearch] = useState<string>("");
@@ -13,7 +14,7 @@ function ListPersonas() {
     setTimeout(() => setShow(true), 200);
   }, []);
 
-  const FilterAllPersonas = AllPersonas.filter((p) => {
+  const FilterAllPersonas: Cast[] = AllPersonas.filter((p) => {
     const MatchName = p.formas[0]?.name
       .toLowerCase()
       .includes(search.toLocaleLowerCase());

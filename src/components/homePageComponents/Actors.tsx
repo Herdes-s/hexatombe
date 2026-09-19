@@ -19,6 +19,7 @@ import henri from "../../assets/images/persona/outros-persona/henri.jpg";
 import Actor from "./ActorsStyles/Actor";
 import FadeIn from "../../hooks/FadeIn";
 
+
 function Actors() {
   return (
     <section className="w-full" id="elenco">

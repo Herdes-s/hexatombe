@@ -1,4 +1,4 @@
-type formas = { img: string; name: string; icon: string };
+type formas = { name: string; img: string; icon?: string };
 
 export type Personas = {
   mini: string;
@@ -19,4 +19,28 @@ export type Personas = {
   descArma1?: string;
   about?: string;
   formas: formas[];
+};
+
+type sobre = [{ sobre01: string }, { sobre02: string }, { sobre03: string }];
+
+export type Cast = {
+  id: number;
+  info?: string;
+  sitacao: string;
+  afinidade?: string;
+  trilha?: string;
+  interprete?: string;
+  classe: string;
+  ocupacao?: string;
+  equipe: string;
+  status: string;
+  sobre: sobre;
+  formas: formas[];
+};
+
+export type Season = {
+  logo: string;
+  nome: string;
+  link: string;
+  color: string;
 };
