@@ -1,8 +1,15 @@
 import { useNavigate } from "react-router-dom";
-import logoHexa from "../../assets/logos/logo-hexa-white.png";
+import logoOrdem from "../../assets/logos/logoOrdem.png";
 import { Search } from "lucide-react";
 
-function Header({ search, setSearch, ocupacao, setOcupacao }) {
+type propsType = {
+  search: string;
+  setSearch: (value: string) => void;
+  ocupacao: string;
+  setOcupacao: (value: string) => void;
+};
+
+function Header({ search, setSearch, ocupacao, setOcupacao }: propsType) {
   const navigate = useNavigate();
   return (
     <header className="relative z-20">
@@ -14,7 +21,7 @@ function Header({ search, setSearch, ocupacao, setOcupacao }) {
         {/* LOGO */}
         <div className=" w-25 cursor-pointer transition-all duration-500 hover:drop-shadow-[0_0_15px_rgba(120,0,0,0.8)]">
           <img
-            src={logoHexa}
+            src={logoOrdem}
             alt="Ordem Paranormal — logo"
             className="w-full h-auto hover:drop-shadow-[0_0_10px_rgba(255,0,0,0.7)]"
             onClick={() => navigate("/")}

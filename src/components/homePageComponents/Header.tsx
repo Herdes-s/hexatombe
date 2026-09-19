@@ -3,7 +3,7 @@ import logoOrdem from "../../assets/logos/logoOrdem.png";
 import { useNavigate } from "react-router-dom";
 
 function Header() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState<boolean>(false);
   const navigate = useNavigate()
 
   useEffect(() => {

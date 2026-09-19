@@ -56,8 +56,9 @@ import papagaio from "../assets/images/CardsGlobal/papagaio.webp";
 import corvo from "../assets/images/CardsGlobal/corvo.webp";
 import suellen from "../assets/images/CardsGlobal/suellen.webp";
 import coruja from "../assets/images/CardsGlobal/coruja.webp";
+import type { Cast } from "../types/TypesProtagonist";
 
-const AllPersonas = [
+const AllPersonas: Cast[] = [
   // Macarados
   {
     id: 101,

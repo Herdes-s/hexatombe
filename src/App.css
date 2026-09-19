@@ -7,11 +7,11 @@
 
 body {
   background: radial-gradient(
-  circle at top,
-  #180000 0%,
-  #0a0000 40%,
-  #000 100%
-);
+    circle at top,
+    #180000 0%,
+    #0a0000 40%,
+    #000 100%
+  );
   color: white;
 }
 
@@ -27,37 +27,34 @@ p {
   font-style: normal;
 }
 
-@theme {
+:root {
   --breakpoint-xs: 950px;
+  --animate-motion-top-bottom: motion-top-bottom 10s ease-in-out infinite;
 }
 
-@theme {
-  --animate-motion-top-bottom: motion-top-bottom 10s ease-in-out infinite;
-
-  @keyframes slowZoom {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.05);
-    }
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
   }
-
-  @keyframes orbitar {
-    from {
-      transform: rotate(0deg) translateX(150px) rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg) translateX(150px) rotate(-360deg);
-    }
+  100% {
+    transform: scale(1.05);
   }
+}
 
-  @keyframes mecher {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 100vw 0;
-    }
+@keyframes orbitar {
+  from {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@keyframes mecher {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100vw 0;
   }
 }

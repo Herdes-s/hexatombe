@@ -1,6 +1,7 @@
 import hexatombe from "../assets/logos/Logo-Hexatombe.jpg";
+import type { Season } from "../types/TypesProtagonist";
 
-const Temporadas = [
+const Temporadas: Season[] = [
   {
     logo: hexatombe,
     nome: "Hexatombe",

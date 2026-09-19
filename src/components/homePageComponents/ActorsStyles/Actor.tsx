@@ -1,6 +1,13 @@
 import FadeIn from "../../../hooks/FadeIn";
 
-function Actor(props) {
+type propsType = {
+  imgActor: string;
+  actor: string;
+  imgPersona: string;
+  persona: string;
+};
+
+function Actor(props: propsType) {
   return (
     <FadeIn>
       <div className="flex my-2.5 w-full relative">
@@ -8,7 +15,7 @@ function Actor(props) {
           <img
             className="w-[200px] z-10 transition-all duration-500 hover:scale-105"
             src={props.imgActor}
-            alt={props.altActor}
+            alt={props.actor}
           />
           <div className="absolute inset-0 bg-black/20 z-0" />
           <div className="py-3 text-[15px] font-semibold text-center">
@@ -21,7 +28,7 @@ function Actor(props) {
           <img
             className="w-[200px] z-10 transition-all duration-500 hover:scale-105"
             src={props.imgPersona}
-            alt={props.altPersona}
+            alt={props.persona}
           />
           <div className="absolute inset-0 bg-black/20 z-0" />
           <div className="tracking-widest text-[14px] uppercase text-[#e5e5e5] drop-shadow-[0_0_6px_#ff0000]">

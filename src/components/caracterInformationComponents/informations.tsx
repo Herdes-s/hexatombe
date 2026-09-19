@@ -6,8 +6,8 @@ import { ChevronLeft } from "lucide-react";
 function Informations() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [show, setShow] = useState(false);
-  const [activeForm, setActiveForm] = useState(0);
+  const [show, setShow] = useState<boolean>(false);
+  const [activeForm, setActiveForm] = useState<number>(0);
 
   useEffect(() => {
     setTimeout(() => setShow(true), 500);
@@ -29,23 +29,26 @@ function Informations() {
       <section className="relative max-w-300 p-10 mx-auto">
         <div className="">
           <button
-            onClick={() => navigate(-1)}
+            onClick={() => {
+              navigate(-1);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             className="flex items-center gap-1 text-[#aaa] hover:text-red-600 transition cursor-pointer"
           >
             <ChevronLeft size={18} />
             Retornar ao Arquivo
           </button>
           <h2 className="text-center text-[clamp(2.875rem,1.27vw+2.55rem,3.5rem)] wrap-break-word tracking-widest text-red-700 mt-4">
-            {CurrentFormas.name}
+            {CurrentFormas?.name}
           </h2>
           <p className="text-center text-[#aaa] mt-2 mb-16 italic">
             {Personage.sitacao}
           </p>
           <div className="px-2.5 mt-auto flex flex-col-reverse lg:flex-row gap-12 items-center">
             <div className="space-y-6 text-[#d0d0d0] leading-relaxed max-w-xl self-center">
-              <p className="opacity-90">{Personage.sobre[0].sobre01}</p>
-              <p className="opacity-70">{Personage.sobre[1].sobre02}</p>
-              <p className="opacity-50">{Personage.sobre[2].sobre03}</p>
+              <p className="opacity-90">{Personage.sobre[0]?.sobre01}</p>
+              <p className="opacity-70">{Personage.sobre[1]?.sobre02}</p>
+              <p className="opacity-50">{Personage.sobre[2]?.sobre03}</p>
             </div>
             <div className="w-px bg-linear-to-b from-transparent via-red-900/40 to-transparent" />
 
@@ -68,7 +71,7 @@ function Informations() {
               <div className="flex-1 flex items-center justify-center">
                 <img
                   className="h-96 object-contain drop-shadow-[0_0_50px_rgba(0,0,0,0.9)]"
-                  src={CurrentFormas.img}
+                  src={CurrentFormas?.img}
                   alt="Personagem"
                 />
               </div>
