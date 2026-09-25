@@ -46,9 +46,9 @@ function Informations() {
           </p>
           <div className="px-2.5 mt-auto flex flex-col-reverse lg:flex-row gap-12 items-center">
             <div className="space-y-6 text-[#d0d0d0] leading-relaxed max-w-xl self-center">
-              <p className="opacity-90">{Personage.sobre[0]?.sobre01}</p>
-              <p className="opacity-70">{Personage.sobre[1]?.sobre02}</p>
-              <p className="opacity-50">{Personage.sobre[2]?.sobre03}</p>
+              <p className="opacity-90">{Personage.sobre01}</p>
+              <p className="opacity-70">{Personage.sobre02}</p>
+              <p className="opacity-50">{Personage.sobre03}</p>
             </div>
             <div className="w-px bg-linear-to-b from-transparent via-red-900/40 to-transparent" />
 
