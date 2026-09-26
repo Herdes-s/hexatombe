@@ -11,3 +11,33 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+
+model forma { 
+  id Int @id @default(autoincrement())
+  name String 
+  img String
+  icon String?
+
+  personId Int
+  person Person @relation(fields: [personId], references: [id])
+}
+
+model Person {
+  id Int @id @default(autoincrement())
+  info String?
+  sitacao String
+  afinidade String?
+  trilha String?
+  interprete String?
+  classe String
+  ocupacao String?
+  equipe String
+  status String
+
+  sobre01 String?
+  sobre02 String?
+  sobre03 String?
+
+  formas forma[]
+}

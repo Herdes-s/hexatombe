@@ -1,11 +1,11 @@
 // src/routers/Persons.route.ts
 import express from "express"
-import { BuscarTodosOsPersonagens } from "../controllers/Persons.controller.ts"
+import { getAllPersons } from "../controllers/Persons.controller.ts"
 
 const app = express();
 
 const router = express.Router();
 
-router.get("/api/persons", BuscarTodosOsPersonagens);
+router.get("/api/persons", getAllPersons);
 
 export default router;
