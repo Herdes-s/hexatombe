@@ -5,7 +5,7 @@ export type Season = {
   color: string;
 };
 
-type formas = { name: string; img: string; icon?: string };
+export type formas = { name: string; img: string; icon?: string };
 
 export type Personas = {
   mini: string;

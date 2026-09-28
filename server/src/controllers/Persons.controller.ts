@@ -4,7 +4,11 @@ import { prisma } from "../lib/prisma";
 import type { Request, Response } from "express";
 
 export async function getAllPersons(req: Request, res: Response) {
-  const persons = await prisma.person.findMany();
+  const persons = await prisma.person.findMany({
+    include: {
+      formas: true,
+    },
+  });
   res.json(persons);
 }
 

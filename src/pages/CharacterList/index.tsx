@@ -1,20 +1,37 @@
 import { useEffect, useState } from "react";
-import AllPersonas from "../../data/AllPersonas";
+// import AllPersonas from "../../data/AllPersonas";
+import { getAllPersons, getPersonForms, getPersons } from "../../api/persons";
 import Header from "../../components/characterListComponents/Header";
 import Personas from "../../components/characterListComponents/Personas";
 import BottomNav from "../../components/homePageComponents/BottonHeader/BottomNav";
-import type { Cast } from "../../types/TypesProtagonist";
+import type { Cast, formas } from "../../types/TypesProtagonist";
 
 function ListPersonas() {
   const [search, setSearch] = useState<string>("");
+  const [persons, setPersons] = useState<Cast[]>([]);
   const [ocupacao, setOcupacao] = useState<string>("");
   const [show, setShow] = useState<boolean>(false);
 
   useEffect(() => {
     setTimeout(() => setShow(true), 200);
+
+    async function carregarPersons() {
+      try {
+        const data = await getAllPersons();
+        setPersons(data);
+      } catch (error) {
+        console.error("Erro ao carregar personagens:", error);
+      }
+    }
+
+    carregarPersons();
   }, []);
 
-  const FilterAllPersonas: Cast[] = AllPersonas.filter((p) => {
+  if (!persons) {
+    return <p>Carregando...</p>;
+  }
+
+  const FilterAllPersonas: Cast[] = persons.filter((p) => {
     const MatchName = p.formas[0]?.name
       .toLowerCase()
       .includes(search.toLocaleLowerCase());

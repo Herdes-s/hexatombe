@@ -39,8 +39,16 @@ async function main() {
 
   await prisma.forma.createMany({
     data: [
-      { name: "Kemi", img: "kemi.webp", personId: 104 },
-      { name: "Fantasma", img: "fantasma.webp", personId: 104 },
+      {
+        name: "Kemi",
+        img: "https://br-withered-lab-b48ukrk4.storage.c-6.us-east-2.aws.neon.tech/persons/kemi.webp",
+        personId: 104,
+      },
+      {
+        name: "Fantasma",
+        img: "https://br-withered-lab-b48ukrk4.storage.c-6.us-east-2.aws.neon.tech/persons/fantasma.webp",
+        personId: 104,
+      },
     ],
   });
 
