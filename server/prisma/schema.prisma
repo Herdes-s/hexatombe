@@ -12,32 +12,114 @@ datasource db {
   provider = "postgresql"
 }
 
+// =========================
+// FORMA
+// =========================
 
-model forma { 
-  id Int @id @default(autoincrement())
-  name String 
-  img String
-  icon String?
+model Forma {
+  id   Int    @id @default(autoincrement())
+  name String
+  img  String
 
   personId Int
-  person Person @relation(fields: [personId], references: [id])
+  person   Person @relation(fields: [personId], references: [id])
 }
 
+// =========================
+// FORMA PROTAGONIST
+// =========================
+
+model FormaProtagonist {
+  id   Int    @id @default(autoincrement())
+  name String
+  img  String
+  icon String
+
+  protagonistId Int
+  protagonist   Protagonist @relation(fields: [protagonistId], references: [id])
+}
+
+// =========================
+// PERSON
+// =========================
+
 model Person {
-  id Int @id @default(autoincrement())
-  info String?
-  sitacao String
-  afinidade String?
-  trilha String?
+  id         Int     @id @default(autoincrement())
+  info       String?
+  sitacao    String
+  afinidade  String?
+  trilha     String?
   interprete String?
-  classe String
-  ocupacao String?
-  equipe String
-  status String
+  classe     String
+  ocupacao   String?
+  equipe     String
+  status     String
 
   sobre01 String?
   sobre02 String?
   sobre03 String?
 
-  formas forma[]
+  seasonId Int
+  season   Season @relation(fields: [seasonId], references: [id])
+
+  formas Forma[]
+}
+
+// =========================
+// PROTAGONIST
+// =========================
+
+model Protagonist {
+  id   Int    @id @default(autoincrement())
+  mini String
+  text String
+
+  seasonId Int
+  season   Season @relation(fields: [seasonId], references: [id])
+
+  golpes Golpe[]
+  armas  Arma[]
+  about  String
+  formas FormaProtagonist[]
+}
+
+// =========================
+// GOLPE
+// =========================
+
+model Golpe {
+  id          Int    @id @default(autoincrement())
+  name        String
+  cost        String
+  description String
+
+  protagonistId Int
+  protagonist   Protagonist @relation(fields: [protagonistId], references: [id])
+}
+
+// =========================
+// ARMA
+// =========================
+
+model Arma {
+  id          Int     @id @default(autoincrement())
+  name        String?
+  description String?
+
+  protagonistId Int
+  protagonist   Protagonist @relation(fields: [protagonistId], references: [id])
+}
+
+// =========================
+// SEASON
+// =========================
+
+model Season {
+  id           Int           @id @default(autoincrement())
+  logo         String
+  nome         String
+  link         String
+  color        String
+  persons      Person[]
+  protagonists Protagonist[]
 }
