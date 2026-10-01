@@ -6,22 +6,8 @@ function ProtagonistDetails() {
   const [index, setIndex] = useState<number>(0);
   const [forma, setForma] = useState<number>(0);
 
-  const golpes = ([1, 2, 3, 4] as const)
-    .map((n) => ({
-      name: personages[index]?.[`nameGolp${n}`],
-      pd: personages[index]?.[`PDGolp${n}`],
-      desc: personages[index]?.[`descriptionGolp${n}`],
-      id: n,
-    }))
-    .filter((g) => g.name);
-
-  const armas = ([1] as const)
-    .map((a) => ({
-      arma: personages[index]?.[`arma${a}`],
-      descArma: personages[index]?.[`descArma${a}`],
-      id: a,
-    }))
-    .filter((b) => b.arma);
+  const golpes = personages[index]?.golpes ?? [];
+  const armas = personages[index]?.armas ?? [];
 
   return (
     <section id="personagem" className="relative w-full py-10 text-[#ddd]">
@@ -85,9 +71,9 @@ function ProtagonistDetails() {
                         HABILIDADES
                       </h4>
                       <div className="space-y-3">
-                        {golpes.map((golpe) => (
+                        {golpes.map((golpe, i) => (
                           <div
-                            key={golpe.id}
+                            key={`${golpe.name}-${i}`}
                             className="border border-red-900/40 bg-[#0a0000]"
                           >
                             <div className="flex justify-between items-center px-3 py-2">
@@ -95,11 +81,11 @@ function ProtagonistDetails() {
                                 {golpe.name}
                               </h3>
                               <span className="text-[#aaa] text-sm">
-                                {golpe.pd}
+                                {golpe.cost}
                               </span>
                             </div>
                             <p className="px-3 py-2 text-sm text-[#ccc] bg-black/70">
-                              {golpe.desc}
+                              {golpe.description}
                             </p>
                           </div>
                         ))}
@@ -113,16 +99,16 @@ function ProtagonistDetails() {
                         ARMAS
                       </h4>
                       <div className="space-y-3">
-                        {armas.map((arma) => (
+                        {armas.map((arma, i) => (
                           <div
-                            key={arma.id}
+                            key={`${arma.name}-${i}`}
                             className="border border-red-900/40 bg-[#120000]"
                           >
                             <h3 className="px-3 py-2 text-red-500">
-                              {arma.arma}
+                              {arma.name}
                             </h3>
                             <p className="px-3 py-2 text-sm text-[#ccc] bg-black/70">
-                              {arma.descArma}
+                              {arma.description}
                             </p>
                           </div>
                         ))}
