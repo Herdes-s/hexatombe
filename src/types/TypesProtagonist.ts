@@ -3,13 +3,13 @@ export type Season = {
   nome: string;
   link: string;
   color: string;
-  cast: Cast[];
   personas: Personas[];
+  protagonists: Protagonists[];
 };
 
 export type formas = { name: string; img: string; icon?: string };
 
-export type Personas = {
+export type Protagonists = {
   mini: string;
   text: string;
   golpes: {
@@ -26,7 +26,7 @@ export type Personas = {
 };
 
 
-export type Cast = {
+export type Personas = {
   id: number;
   info?: string;
   sitacao: string;

@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 // import AllPersonas from "../../data/AllPersonas";
 import { getAllPersons, getPersonForms, getPersons } from "../../api/persons";
 import Header from "../../components/characterListComponents/Header";
-import Personas from "../../components/characterListComponents/Personas";
+import Persons from "../../components/characterListComponents/Persons";
 import BottomNav from "../../components/homePageComponents/BottonHeader/BottomNav";
-import type { Cast, formas } from "../../types/TypesProtagonist";
+import type { Personas, formas } from "../../types/TypesProtagonist";
 
 function ListPersonas() {
   const [search, setSearch] = useState<string>("");
-  const [persons, setPersons] = useState<Cast[]>([]);
+  const [persons, setPersons] = useState<Personas[]>([]);
   const [ocupacao, setOcupacao] = useState<string>("");
   const [show, setShow] = useState<boolean>(false);
 
@@ -31,7 +31,11 @@ function ListPersonas() {
     return <p>Carregando...</p>;
   }
 
-  const FilterAllPersonas: Cast[] = persons.filter((p) => {
+  if (persons.length === 0) {
+    return <p>Nenhum personagem encontrado.</p>;
+  }
+
+  const FilterAllPersonas: Personas[] = persons.filter((p) => {
     const MatchName = p.formas[0]?.name
       .toLowerCase()
       .includes(search.toLocaleLowerCase());
@@ -74,7 +78,7 @@ function ListPersonas() {
             ocupacao={ocupacao}
             setOcupacao={setOcupacao}
           />
-          <Personas FilterAllPersonas={FilterAllPersonas} />
+          <Persons FilterAllPersonas={FilterAllPersonas} />
         </div>
       </section>
       <BottomNav />

@@ -1,6 +1,5 @@
 // src/api/persons.ts
 
-import type { Cast } from "../types/TypesProtagonist";
 
 const API_URL = "http://localhost:3000/api";
 
@@ -29,6 +28,26 @@ export async function getPersonForms(id: number) {
 
   if (!response.ok) {
     throw new Error("Erro ao buscar Formas");
+  }
+
+  return response.json();
+}
+
+export async function getAllProtagonists() {
+  const response = await fetch(`${API_URL}/protagonists`);
+
+  if (!response.ok) {
+    throw new Error("Erro ao buscar todos os Protagonistas");
+  }
+
+  return response.json();
+}
+
+export async function getAllSeasons() {
+  const response = await fetch(`${API_URL}/seasons`);
+
+  if (!response.ok) {
+    throw new Error("Erro ao buscar todas as Temporadas");
   }
 
   return response.json();

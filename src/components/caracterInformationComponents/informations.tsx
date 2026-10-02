@@ -2,14 +2,14 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getAllPersons } from "../../api/persons";
 import { useEffect, useState } from "react";
 import { ChevronLeft } from "lucide-react";
-import type { Cast } from "../../types/TypesProtagonist";
+import type { Personas } from "../../types/TypesProtagonist";
 
 function Informations() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [show, setShow] = useState<boolean>(false);
   const [activeForm, setActiveForm] = useState<number>(0);
-  const [persons, setPersons] = useState<Cast[]>([]);
+  const [persons, setPersons] = useState<Personas[]>([]);
 
   useEffect(() => {
     setTimeout(() => setShow(true), 500);
