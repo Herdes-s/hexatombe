@@ -13,8 +13,8 @@ app.use(express.json());
 app.use(cors())
 
 app.use("/", PersonsController)
-app.use("/protagonists", ProtagonistsController)
-app.use("/seasons", SeasonsController)
+app.use("/", ProtagonistsController)
+app.use("/", SeasonsController)
 
 app.get("/", (_req, res) => {
   res.send("Hello World");

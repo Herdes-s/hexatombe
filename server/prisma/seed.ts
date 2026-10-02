@@ -80,7 +80,51 @@ async function main() {
 
       protagonists: {
         create: [
-          // Depois colocaremos os protagonistas aqui
+          {
+            mini: "https://br-withered-lab-b48ukrk4.storage.c-6.us-east-2.aws.neon.tech/protagonists/dalmo-mini",
+            text: " O sangue poderia até pagar bem, mas para Dalmo, A glória era viciante.",
+            golpes: {
+              create: [
+                {
+                  name: "GOLPE DE ARENA",
+                  cost: "3 PD",
+                  description:
+                    "Quando acertar um ataque corpo a corpo, você pode fazer um ataque adicional ou uma manobra.",
+                },
+                {
+                  name: "PRESSÃO ATMOSFÉRICA",
+                  cost: "3 PD",
+                  description:
+                    "Se acertar um ataque você causa +1d10 pontos de dano de energia (+5) e o alvo fica atordoado por mais uma rodada.",
+                },
+              ],
+            },
+            armas: {
+              create: [
+                {
+                  name: "MANOPLAS DO COLOSSO",
+                  description:
+                    "Esse par de manoplas amaldiçoadas de energia faz com que cada soco seja acompanhado de pressão atmosférica demolidora. Elas causam +1d10 (+5) de dano de energia",
+                },
+              ],
+            },
+            about:
+              "Dalmo… ou como a maioria prefere chamar, “o Colosso”. Se você já viu ele de perto, sabe que esse apelido não é exagero — é aviso. Dizem que ele não nasceu forte: foi moldado. Cada marca no corpo dele carrega uma história que ninguém tem coragem de pedir pra ouvir. O Colosso é o tipo de homem que avança quando todos recuam, como se o medo não tivesse lugar dentro dele. Alguns juram que ele já enfrentou criaturas do Outro Lado sozinho e voltou vivo só por teimosia. Ele não fala muito, mas quando olha pra você, parece que está avaliando se você vai aguentar o que está por vir… ou se vai ser só mais um nome nas paredes de algum ritual. Se tem alguém que você quer do seu lado quando o impossível se aproxima, é o Colosso. E se ele estiver contra você? Então é melhor correr antes que ele perceba.",
+            formas: {
+              create: [
+                {
+                  img: "https://br-withered-lab-b48ukrk4.storage.c-6.us-east-2.aws.neon.tech/protagonists/dalmoIcon",
+                  name: "Dalmo",
+                  icon: "https://br-withered-lab-b48ukrk4.storage.c-6.us-east-2.aws.neon.tech/protagonists/semMasc",
+                },
+                {
+                  img: "https://br-withered-lab-b48ukrk4.storage.c-6.us-east-2.aws.neon.tech/protagonists/dalmoMascIcon",
+                  name: "COLOSSO",
+                  icon: "https://br-withered-lab-b48ukrk4.storage.c-6.us-east-2.aws.neon.tech/protagonists/comMasc",
+                },
+              ],
+            },
+          },
         ],
       },
     },

@@ -1,10 +1,10 @@
 // src/routers/Seasons.route.ts
 
-import  express  from "express";
+import express from "express";
 import { getAllSeasons } from "../controllers/Seasons.controller";
 
 const router = express.Router();
 
-router.get("/", getAllSeasons);
+router.get("/api/seasons", getAllSeasons);
 
 export default router;
