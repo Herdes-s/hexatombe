@@ -13,19 +13,30 @@ function ProtagonistDetails() {
   const armas = protagonists[index]?.armas ?? [];
 
   useEffect(() => {
+  async function load() {
+    try {
+      const data = await getAllProtagonists();
 
-    async function load() {
-      try {
-        const data = await getAllProtagonists();
-  
-        setProtagonists(data);
-      } catch (error) {
-        console.error("Erro ao buscar os Protagonistas:", error);
-      }
+      console.log("Protagonistas carregados:", data);
+
+      const ordenados = data.map((protagonist: Protagonists) => ({
+        ...protagonist,
+        formas: [...protagonist.formas].sort((a, b) => {
+          const aComMasc = a.icon?.includes("comMasc.jpg");
+          const bComMasc = b.icon?.includes("comMasc.jpg");
+
+          return Number(aComMasc) - Number(bComMasc);
+        }),
+      }));
+
+      setProtagonists(ordenados);
+    } catch (error) {
+      console.error("Erro ao buscar os Protagonistas:", error);
     }
+  }
 
-    load();
-  }, []);
+  load();
+}, []);
 
   if (protagonists.length === 0) {
     return (

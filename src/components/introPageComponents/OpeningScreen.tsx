@@ -31,9 +31,9 @@ export default function OpeningScreen() {
             backgroundImage: `url(${lab})`,
           }}
         />
-        <h1 className="text-3xl font-bold text-white text-center mt-10">
+        <h2 className="text-3xl font- font-bold text-white text-center mt-10">
           Sessões não encontradas
-        </h1>
+        </h2>
       </section>
     );
   }
@@ -60,13 +60,8 @@ export default function OpeningScreen() {
               className=" flex flex-col gap-2 cursor-pointer group items-center "
               onClick={() => navigate(`/${t.link}`)}
             >
-              <img
-                src={t.logo}
-                alt="logo"
-                className="w-50 shadow-[0px_4px_8px_rgba(255,255,255,0.22)] group-hover:shadow-[0px_0px_16px_rgba(255,255,255,0.22)] group-hover:scale-105 group-hover:translate-y-2 transition-all ease-in-out"
-              />
-              <h3 className="group-hover:scale-95 group-hover:-translate-y-4 transition-all ease-in-out">
-                {t.nome}
+              <h3 className="text-2xl font-bold text-white text-center transition-all duration-300 group-hover:scale-110 border-2 border-transparent group-hover:border-white p-2 rounded-md">
+                Entrar em Hexatombe
               </h3>
             </div>
           ))}
