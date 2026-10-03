@@ -6,7 +6,7 @@ import ProtagonistsController from "./routers/Protagonists.route.ts"
 import SeasonsController from "./routers/Seasons.route.ts"
 
 const app: Express = express();
-const port = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 
 app.use(express.json());
@@ -20,6 +20,6 @@ app.get("/", (_req, res) => {
   res.send("Hello World");
 });
 
-app.listen(port, () =>
-  console.log(`Servidor aberto na porta: http://localhost:${port}`),
+app.listen(PORT, '0.0.0.0', () =>
+  console.log(`Servidor aberto na porta: http://localhost:${PORT}`),
 );
