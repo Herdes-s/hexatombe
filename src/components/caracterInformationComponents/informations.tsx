@@ -1,22 +1,35 @@
 import { useNavigate, useParams } from "react-router-dom";
-import AllPersonas from "../../data/AllPersonas";
+import { getAllPersons } from "../../api/persons";
 import { useEffect, useState } from "react";
 import { ChevronLeft } from "lucide-react";
+import type { Personas } from "../../types/TypesProtagonist";
 
 function Informations() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [show, setShow] = useState<boolean>(false);
   const [activeForm, setActiveForm] = useState<number>(0);
+  const [persons, setPersons] = useState<Personas[]>([]);
 
   useEffect(() => {
     setTimeout(() => setShow(true), 500);
+
+    async function loadPerson() {
+      try {
+        const data = await getAllPersons();
+        setPersons(data);
+      } catch (error) {
+        console.error("Erro ao carregar personagem", error);
+      }
+    }
+    
+    loadPerson();
   }, []);
 
-  const Personage = AllPersonas.find((p) => p.id.toString() === id);
-  const CurrentFormas = Personage ? Personage.formas[activeForm] : null;
+  const Person = persons.find((p) => p.id.toString() === id);
+  const CurrentFormas = Person ? Person.formas[activeForm] : null;
 
-  if (!Personage) {
+  if (!Person) {
     return <p>Personagem não encontrado!</p>;
   }
 
@@ -42,19 +55,19 @@ function Informations() {
             {CurrentFormas?.name}
           </h2>
           <p className="text-center text-[#aaa] mt-2 mb-16 italic">
-            {Personage.sitacao}
+            {Person.sitacao}
           </p>
           <div className="px-2.5 mt-auto flex flex-col-reverse lg:flex-row gap-12 items-center">
             <div className="space-y-6 text-[#d0d0d0] leading-relaxed max-w-xl self-center">
-              <p className="opacity-90">{Personage.sobre[0]?.sobre01}</p>
-              <p className="opacity-70">{Personage.sobre[1]?.sobre02}</p>
-              <p className="opacity-50">{Personage.sobre[2]?.sobre03}</p>
+              <p className="opacity-90">{Person.sobre01}</p>
+              <p className="opacity-70">{Person.sobre02}</p>
+              <p className="opacity-50">{Person.sobre03}</p>
             </div>
             <div className="w-px bg-linear-to-b from-transparent via-red-900/40 to-transparent" />
 
             <div className="relative px-6 py-6 flex flex-col h-full bg-linear-to-t from-[#200000] via-[#150000] to-[#0b0000]">
               <div className="flex justify-around">
-                {Personage.formas.map((formas, index) => (
+                {Person.formas.map((formas, index) => (
                   <button
                     key={index}
                     onClick={() => setActiveForm(index)}
@@ -79,29 +92,27 @@ function Informations() {
                 <h2 className="text-center py-1.5 ">Sobre</h2>
                 <div className="mt-6 border-t border-red-900/30 pt-4 text-sm text-[#ccc] space-y-2">
                   <p>
-                    <span className="text-[#888]">Classe:</span>{" "}
-                    {Personage.classe}
+                    <span className="text-[#888]">Classe:</span> {Person.classe}
                   </p>
                   <p>
-                    <span className="text-[#888]">Equipe:</span>{" "}
-                    {Personage.equipe}
+                    <span className="text-[#888]">Equipe:</span> {Person.equipe}
                   </p>
                   <p>
                     <span className="text-[#888]">Status:</span>{" "}
                     <span
                       className={`font-semibold ${
-                        Personage.status === "Vivo"
+                        Person.status === "Vivo"
                           ? "text-red-600"
                           : "text-[#777]"
                       }`}
                     >
-                      {Personage.status}
+                      {Person.status}
                     </span>
                   </p>
-                  {Personage.interprete && (
+                  {Person.interprete && (
                     <p>
                       <span className="text-[#888]">Intérprete:</span>{" "}
-                      {Personage.interprete}
+                      {Person.interprete}
                     </p>
                   )}
                 </div>

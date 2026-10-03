@@ -1,27 +1,60 @@
-import { useState } from "react";
-import personages from "../../../data/Protagonists";
+import { useEffect, useState } from "react";
+// import protagonists from "../../../data/Protagonists";
 import FadeIn from "../../../hooks/FadeIn";
+import { getAllProtagonists } from "../../../api/persons";
+import type { Protagonists } from "../../../types/TypesProtagonist";
 
 function ProtagonistDetails() {
   const [index, setIndex] = useState<number>(0);
+  const [protagonists, setProtagonists] = useState<Protagonists[]>([]);
   const [forma, setForma] = useState<number>(0);
 
-  const golpes = ([1, 2, 3, 4] as const)
-    .map((n) => ({
-      name: personages[index]?.[`nameGolp${n}`],
-      pd: personages[index]?.[`PDGolp${n}`],
-      desc: personages[index]?.[`descriptionGolp${n}`],
-      id: n,
-    }))
-    .filter((g) => g.name);
+  const golpes = protagonists[index]?.golpes ?? [];
+  const armas = protagonists[index]?.armas ?? [];
 
-  const armas = ([1] as const)
-    .map((a) => ({
-      arma: personages[index]?.[`arma${a}`],
-      descArma: personages[index]?.[`descArma${a}`],
-      id: a,
-    }))
-    .filter((b) => b.arma);
+  useEffect(() => {
+  async function load() {
+    try {
+      const data = await getAllProtagonists();
+
+      console.log("Protagonistas carregados:", data);
+
+      const ordenados = data.map((protagonist: Protagonists) => ({
+        ...protagonist,
+        formas: [...protagonist.formas].sort((a, b) => {
+          const aComMasc = a.icon?.includes("comMasc.jpg");
+          const bComMasc = b.icon?.includes("comMasc.jpg");
+
+          return Number(aComMasc) - Number(bComMasc);
+        }),
+      }));
+
+      setProtagonists(ordenados);
+    } catch (error) {
+      console.error("Erro ao buscar os Protagonistas:", error);
+    }
+  }
+
+  load();
+}, []);
+
+  if (protagonists.length === 0) {
+    return (
+      <section id="personagem" className="relative w-full py-10 text-[#ddd]">
+        <div className=" w-full ">
+          <div className="flex-1 space-y-8">
+            <FadeIn>
+              <div className="text-center space-y-2">
+                <h2 className="text-[clamp(24px,6vw,64px)] tracking-widest text-red-700 drop-shadow-[0_0_15px_#300000]">
+                  Sem Personagens
+                </h2>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="personagem" className="relative w-full py-10 text-[#ddd]">
@@ -32,10 +65,10 @@ function ProtagonistDetails() {
           <FadeIn>
             <div className="text-center space-y-2">
               <h2 className="text-[clamp(24px,6vw,64px)] tracking-widest text-red-700 drop-shadow-[0_0_15px_#300000]">
-                {personages[index]?.formas?.[forma]?.name}
+                {protagonists[index]?.formas?.[forma]?.name}
               </h2>
               <p className="text-[#bbb] text-sm max-w-2xl mx-auto">
-                {personages[index]?.text}
+                {protagonists[index]?.text}
               </p>
             </div>
           </FadeIn>
@@ -45,7 +78,7 @@ function ProtagonistDetails() {
           <FadeIn>
             <div className="flex flex-col lg:flex-row justify-between">
               <div className="flex flex-row lg:flex-col gap-2">
-                {personages.map((p, i) => (
+                {protagonists.map((p, i) => (
                   <button
                     key={i}
                     onClick={() => {
@@ -71,7 +104,7 @@ function ProtagonistDetails() {
                 <div className="relative w-full lg:w-[40%] flex justify-center">
                   <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent blur-xl rounded-full" />
                   <img
-                    src={personages[index]?.formas?.[forma]?.img}
+                    src={protagonists[index]?.formas?.[forma]?.img}
                     alt="personagem"
                     className="relative z-10 w-64 max-w-md drop-shadow-[0_0_25px_#300000]"
                   />
@@ -85,9 +118,9 @@ function ProtagonistDetails() {
                         HABILIDADES
                       </h4>
                       <div className="space-y-3">
-                        {golpes.map((golpe) => (
+                        {golpes.map((golpe, i) => (
                           <div
-                            key={golpe.id}
+                            key={`${golpe.name}-${i}`}
                             className="border border-red-900/40 bg-[#0a0000]"
                           >
                             <div className="flex justify-between items-center px-3 py-2">
@@ -95,11 +128,11 @@ function ProtagonistDetails() {
                                 {golpe.name}
                               </h3>
                               <span className="text-[#aaa] text-sm">
-                                {golpe.pd}
+                                {golpe.cost}
                               </span>
                             </div>
                             <p className="px-3 py-2 text-sm text-[#ccc] bg-black/70">
-                              {golpe.desc}
+                              {golpe.description}
                             </p>
                           </div>
                         ))}
@@ -113,16 +146,16 @@ function ProtagonistDetails() {
                         ARMAS
                       </h4>
                       <div className="space-y-3">
-                        {armas.map((arma) => (
+                        {armas.map((arma, i) => (
                           <div
-                            key={arma.id}
+                            key={`${arma.name}-${i}`}
                             className="border border-red-900/40 bg-[#120000]"
                           >
                             <h3 className="px-3 py-2 text-red-500">
-                              {arma.arma}
+                              {arma.name}
                             </h3>
                             <p className="px-3 py-2 text-sm text-[#ccc] bg-black/70">
-                              {arma.descArma}
+                              {arma.description}
                             </p>
                           </div>
                         ))}
@@ -137,7 +170,7 @@ function ProtagonistDetails() {
           {/* FORMAS */}
           <FadeIn>
             <div className="flex justify-center gap-3 py-4 bg-linear-to-r from-transparent via-black/80 to-transparent">
-              {personages[index]?.formas?.map((f, i) => (
+              {protagonists[index]?.formas?.map((f, i) => (
                 <button
                   key={i}
                   onClick={() => setForma(i)}
@@ -161,7 +194,7 @@ function ProtagonistDetails() {
           <FadeIn>
             <div className="max-w-3xl mx-auto text-center">
               <p className="bg-[#12000080] px-4 py-3 text-sm drop-shadow-[0_0_15px_#180000]">
-                {personages[index]?.about}
+                {protagonists[index]?.about}
               </p>
             </div>
           </FadeIn>

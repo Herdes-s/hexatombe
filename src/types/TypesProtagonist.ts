@@ -1,29 +1,32 @@
-type formas = { name: string; img: string; icon?: string };
+export type Season = {
+  logo: string;
+  nome: string;
+  link: string;
+  color: string;
+  personas: Personas[];
+  protagonists: Protagonists[];
+};
 
-export type Personas = {
+export type formas = { name: string; img: string; icon?: string };
+
+export type Protagonists = {
   mini: string;
   text: string;
-  nameGolp1: string;
-  PDGolp1: string;
-  descriptionGolp1: string;
-  nameGolp2: string;
-  PDGolp2: string;
-  descriptionGolp2: string;
-  nameGolp3?: string;
-  PDGolp3?: string;
-  descriptionGolp3?: string;
-  nameGolp4?: string;
-  PDGolp4?: string;
-  descriptionGolp4?: string;
-  arma1?: string;
-  descArma1?: string;
-  about?: string;
+  golpes: {
+    name: string;
+    cost: string;
+    description: string;
+  }[];
+  armas: {
+    name?: string;
+    description?: string;
+  }[];
+  about: string;
   formas: formas[];
 };
 
-type sobre = [{ sobre01: string }, { sobre02: string }, { sobre03: string }];
 
-export type Cast = {
+export type Personas = {
   id: number;
   info?: string;
   sitacao: string;
@@ -34,13 +37,10 @@ export type Cast = {
   ocupacao?: string;
   equipe: string;
   status: string;
-  sobre: sobre;
+  sobre01?: string;
+  sobre02?: string;
+  sobre03?: string;
   formas: formas[];
 };
 
-export type Season = {
-  logo: string;
-  nome: string;
-  link: string;
-  color: string;
-};
+

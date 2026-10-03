@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import type { Cast } from "../../types/TypesProtagonist";
+import type { Personas } from "../../types/TypesProtagonist";
 
-function Personas({ FilterAllPersonas }: { FilterAllPersonas: Cast[] }) {
+function Persons({ FilterAllPersonas }: { FilterAllPersonas: Personas[] }) {
   const navigate = useNavigate();
 
   return (
@@ -40,4 +40,4 @@ function Personas({ FilterAllPersonas }: { FilterAllPersonas: Cast[] }) {
   );
 }
 
-export default Personas;
+export default Persons;
