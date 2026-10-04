@@ -1,7 +1,7 @@
 // src/api/persons.ts
 
 
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://hexatombe.onrender.com/api";
 
 export async function getAllPersons() {
   const response = await fetch(`${API_URL}/persons`);
